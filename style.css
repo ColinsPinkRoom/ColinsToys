@@ -1,223 +1,228 @@
-
 body {
-    background-color: #fafafa; 
-    font-family: "Helvetica", Arial, sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 20px;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  background-color: #fafafa;
+  font-family: "Helvetica", Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: url('https://images.stockcake.com/public/4/2/d/42d2b457-c2cf-4c21-b78e-4175a3761a4d_large/cozy-bedroom-decor-stockcake.jpg') no-repeat center center / cover;
-    filter: blur(8px) brightness(0.7);
-    z-index: -1;
-    pointer-events: none;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("https://images.stockcake.com/public/4/2/d/42d2b457-c2cf-4c21-b78e-4175a3761a4d_large/cozy-bedroom-decor-stockcake.jpg")
+    no-repeat center center / cover;
+  filter: blur(8px) brightness(0.7);
+  z-index: -1;
+  pointer-events: none;
 }
 
 #mainTitle {
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: #f79fcd; /* deep rose color */
-    margin-bottom: 10px;
-    font-family: 'Georgia', serif;
-    letter-spacing: 1px;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 78%);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #f79fcd; /* deep rose color */
+  margin-bottom: 10px;
+  font-family: "Georgia", serif;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 78%);
+  text-align: center;
 }
 
 .intro-text {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #ffffff;
-    max-width: 700px;
-    text-align: center;
-    margin: 5px 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: rgba(255, 240, 245, 0.3); /* soft blush tint */
-    padding: 10px 15px;
-    border-radius: 8px;
-    margin-top: 10px;
-    margin-bottom: 25px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 50%);
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 78%);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ffffff;
+  max-width: 700px;
+  text-align: center;
+  margin: 5px 0;
+  font-family: "Segoe UI", sans-serif;
+  background: rgba(255, 240, 245, 0.3); /* soft blush tint */
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 50%);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 78%);
 }
 
 h4 {
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    color: #8b3a62; /* deep rosy plum */
-    background: rgba(255, 228, 235, 0.7);
-    padding: 10px 16px;
-    border-radius: 12px;
-    margin: 20px 0 10px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,37%);
-    backdrop-filter: blur(2px);
-    text-shadow: 1px 1px 2px rgba(255, 240, 245, 0.8);
+  font-family: "Segoe UI", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #8b3a62; /* deep rosy plum */
+  background: rgba(255, 228, 235, 0.7);
+  padding: 10px 16px;
+  border-radius: 12px;
+  margin: 20px 0 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 37%);
+  backdrop-filter: blur(2px);
+  text-shadow: 1px 1px 2px rgba(255, 240, 245, 0.8);
 }
 
-
- /* DILDOS CONTAINER & LIST */
+/* DILDOS CONTAINER & LIST */
 
 #dildosContainer {
-    display: flex;
-    flex-direction: column;  
-    align-items: center;
-    padding: 20px;
-    gap: 16px;
-    max-width: 700px;
-    width: 100%;
-    background: rgba(255, 240, 250, 0.9); /* light pink/lavender tint */
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 16px;
+  max-width: 700px;
+  width: 100%;
+  background: rgba(255, 240, 250, 0.9); /* light pink/lavender tint */
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 50%);
 }
-
 
 #dildosList {
-    margin: 0;
-    padding: 0;
-    border-top:   1px solid #ddd;
-    border-bottom:1px solid #ddd;
-    width: 100%;
-    max-height: 400px;
-    overflow-y: auto;
-    
-    display: flex;
-    flex-wrap: wrap;               
-    justify-content: center; 
-    align-items: flex-start;    
-    gap: 20px;                        
-    
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  max-height: 400px;
+  overflow-y: auto;
 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
 /* SINGLE ITEM */
 .dildo-Item {
-    flex: 0 1 120px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    overflow: hidden;
+  flex: 0 1 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
 }
 
 .dildo-Item img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    display: block; 
-    border-bottom: 1px solid #eee; 
-    margin-top: 12px;
-    border-radius: 4px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid #eee;
+  margin-top: 12px;
+  border-radius: 4px;
 }
 
 .dildo-Item p {
-    margin: 8px 0 12px;
-    padding: 0 8px;
-    font-size: 14px;
-    color: #444;
-    text-align: center;
+  margin: 8px 0 12px;
+  padding: 0 8px;
+  font-size: 14px;
+  color: #444;
+  text-align: center;
 }
 
 .dildo-Item p {
-    margin: 8px 0;
-    padding: 6px 10px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #7b2e48; /* Deep rose */
-    background-color: rgba(255, 240, 245, 0.6); /* Blush background */
-    border-radius: 6px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    font-family: 'Segoe UI', sans-serif;
-    backdrop-filter: blur(2px);
+  margin: 8px 0;
+  padding: 6px 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #7b2e48; /* Deep rose */
+  background-color: rgba(255, 240, 245, 0.6); /* Blush background */
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+  backdrop-filter: blur(2px);
 }
-
 
 .dildo-Item:hover {
-    transform: translateY(-4px) scale(1.05);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-
 .dildo-Item a {
-    color: #2980b9;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+  color: #2980b9;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .dildo-Item a:hover {
-    color: #1c5980;
+  color: #1c5980;
 }
 
-
-  /*DEALS LIST */
+/*DEALS LIST */
 #dealList {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    border-top:   1px solid #ddd;
-    border-bottom:1px solid #ddd;
-    width: 100%;
-    max-height: 400px;
-    overflow-y: auto;
-    
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
-    
-    padding: 10px 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  max-height: 400px;
+  overflow-y: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+
+  padding: 10px 0;
 }
 
 .deal-Item {
-    flex: 0 1 150px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 12px;
-    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  flex: 0 1 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  transition: background-color 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .deal-Item h4 {
-    margin: 0 0 10px;
-    font-size: 16px;
-    color: #2c3e50;
-    text-align: center;
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: #2c3e50;
+  text-align: center;
 }
 
 .deal-Item:hover {
-    transform: translateY(-3px);
+  transform: translateY(-3px);
 }
 
-
-
 a {
-    text-decoration: none;
-    color: #2980b9;
+  text-decoration: none;
+  color: #2980b9;
 }
 
 a:hover {
-    color: #1c5980;
+  color: #1c5980;
+}
+
+footer {
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  background-color: rgba(255, 240, 245, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
 }
