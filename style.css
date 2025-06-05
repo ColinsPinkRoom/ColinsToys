@@ -1,0 +1,197 @@
+
+body {
+    background-color: #fafafa; 
+    font-family: "Helvetica", Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1950&q=80') no-repeat center center / cover;
+    filter: blur(8px) brightness(0.7);
+    z-index: -1;
+    pointer-events: none;
+}
+
+#mainTitle {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #f79fcd; /* deep rose color */
+    margin-bottom: 10px;
+    font-family: 'Georgia', serif;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 78%);
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #5e4b4b;
+    max-width: 700px;
+    text-align: center;
+    margin: 5px 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: rgba(255, 240, 245, 0.3); /* soft blush tint */
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 50%);
+}
+
+
+ /* DILDOS CONTAINER & LIST */
+
+#dildosContainer {
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    padding: 20px;
+    gap: 16px;
+    max-width: 700px;
+    width: 100%;
+    background: rgba(255, 240, 250, 0.9); /* light pink/lavender tint */
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 50%);
+}
+
+
+#dildosList {
+    margin: 0;
+    padding: 0;
+    border-top:   1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    width: 100%;
+    max-height: 400px;
+    overflow-y: auto;
+    
+    display: flex;
+    flex-wrap: wrap;               
+    justify-content: center; 
+    align-items: flex-start;    
+    gap: 20px;                        
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+/* SINGLE ITEM */
+.dildo-Item {
+    flex: 0 1 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+}
+
+.dildo-Item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    display: block; 
+    border-bottom: 1px solid #eee; 
+    margin-top: 12px;
+    border-radius: 4px;
+}
+
+.dildo-Item p {
+    margin: 8px 0 12px;
+    padding: 0 8px;
+    font-size: 14px;
+    color: #444;
+    text-align: center;
+}
+
+.dildo-Item:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.dildo-Item a {
+    color: #2980b9;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.dildo-Item a:hover {
+    color: #1c5980;
+}
+
+
+  /*DEALS LIST */
+#dealList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top:   1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    width: 100%;
+    max-height: 400px;
+    overflow-y: auto;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    
+    padding: 10px 0;
+}
+
+.deal-Item {
+    flex: 0 1 150px; 
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.deal-Item h4 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.deal-Item:hover {
+    transform: translateY(-3px);
+    background-color: #f9f5f0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+
+
+a {
+    text-decoration: none;
+    color: #2980b9;
+}
+
+a:hover {
+    color: #1c5980;
+}
