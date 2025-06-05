@@ -5,40 +5,48 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch("data/products.json")
     .then((response) => response.json())
     .then((data) => {
-      loadingMessage.style.display = "none"; // Hide loading message once data is ready
+      loadingMessage.style.display = "none";
 
-      // ✅ Correct loop over stores
-      ["Vuxen.se", "Mshop.se"].forEach((store) => {
-        const sectionHeader = document.createElement("h4");
-        sectionHeader.textContent = store;
-        container.appendChild(sectionHeader);
+      ["Vuxen.se", "Mshop.se", "Sinful.se", "Extra Products"].forEach(
+        (store) => {
+          const sectionHeader = document.createElement("h4");
+          sectionHeader.textContent = store;
+          container.appendChild(sectionHeader);
 
-        const listWrapper = document.createElement("div");
-        listWrapper.id = "dildosList";
+          const listWrapper = document.createElement("div");
+          listWrapper.id = "dildosList";
 
-        const products = data[store];
-        if (!products) {
-          console.warn(`⚠️ No products found for store: ${store}`);
-          return;
-        }
+          let products = data[store];
+          if (!products) {
+            console.warn(`⚠️ No products found for store: ${store}`);
+            return;
+          }
 
-        products.forEach((item) => {
-          const itemDiv = document.createElement("div");
-          itemDiv.className = "dildo-Item";
+          // Sort products by numeric price ascending
+          products = products.slice().sort((a, b) => {
+            const priceA = parseFloat(a.price.replace(/[^\d\.]/g, ""));
+            const priceB = parseFloat(b.price.replace(/[^\d\.]/g, ""));
+            return priceA - priceB;
+          });
 
-          itemDiv.innerHTML = `
+          products.forEach((item) => {
+            const itemDiv = document.createElement("div");
+            itemDiv.className = "dildo-Item";
+
+            itemDiv.innerHTML = `
             <a href="${item.link}" target="_blank">
               <p>${item.price}</p>
               <img src="${item.img}" width="100" height="100" />
             </a>
           `;
-          listWrapper.appendChild(itemDiv);
-        });
+            listWrapper.appendChild(itemDiv);
+          });
 
-        container.appendChild(listWrapper);
-      });
+          container.appendChild(listWrapper);
+        }
+      );
 
-      // ✅ Render deals
+      // Render deals
       const dealsHeader = document.createElement("h4");
       dealsHeader.textContent = "DEALS";
       container.appendChild(dealsHeader);
