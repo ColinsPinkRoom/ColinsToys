@@ -25,6 +25,12 @@ body::before {
   pointer-events: none;
 }
 
+#loadingMessage {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
 #mainTitle {
   font-size: 2.5rem;
   font-weight: 600;
@@ -81,6 +87,12 @@ h4 {
   background: rgba(255, 240, 250, 0.9); /* light pink/lavender tint */
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 50%);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#dildosContainer.visible {
+  opacity: 1;
 }
 
 #dildosList {
