@@ -61,17 +61,21 @@ body::before {
 
 h4 {
   font-family: "Segoe UI", sans-serif;
+  min-width: 200px;
   font-size: 20px;
   font-weight: 600;
   color: #8b3a62; /* deep rosy plum */
   background: rgba(255, 228, 235, 0.7);
   padding: 10px 16px;
   border-radius: 12px;
-  margin: 20px 0 10px;
+  margin: 10px 0 20px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 37%);
   backdrop-filter: blur(2px);
   text-shadow: 1px 1px 2px rgba(255, 240, 245, 0.8);
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 /* DILDOS CONTAINER & LIST */
@@ -81,13 +85,12 @@ h4 {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  gap: 16px;
   max-width: 700px;
   width: 100%;
   background: rgba(255, 240, 250, 0.9); /* light pink/lavender tint */
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 50%);
-  opacity: 0;
+  /* opacity: 0; */
   transition: opacity 0.5s ease-in-out;
 }
 
@@ -95,14 +98,26 @@ h4 {
   opacity: 1;
 }
 
-#dildosList {
+.list-group {
   margin: 0;
   padding: 0;
-  border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   width: 100%;
-  max-height: 400px;
+
   overflow-y: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.dildosList {
+  margin: 0px;
+  padding: 0;
+  width: 100%;
 
   display: flex;
   flex-wrap: wrap;
@@ -112,6 +127,23 @@ h4 {
 
   padding-top: 10px;
   padding-bottom: 10px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: scaleY(0.95);
+  transform-origin: top;
+  transition: max-height 0.6s ease, opacity 0.4s ease, transform 0.4s ease;
+  scrollbar-gutter: stable both-edges;
+}
+
+.dildosList.opening {
+  max-height: 400px;
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.dildosList.scrollable {
+  overflow-y: auto;
 }
 
 /* SINGLE ITEM */
@@ -230,4 +262,18 @@ a:hover {
 
 #footer {
   color: #ffffff;
+}
+
+/*Animations*/
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+
+    transform: translateY(0px);
+  }
 }

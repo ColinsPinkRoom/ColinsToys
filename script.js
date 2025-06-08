@@ -7,44 +7,75 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((data) => {
       loadingMessage.style.display = "none";
 
-      ["Vuxen.se", "Mshop.se", "Sinful.se", "Extra Products"].forEach(
-        (store) => {
-          const sectionHeader = document.createElement("h4");
-          sectionHeader.textContent = store;
-          container.appendChild(sectionHeader);
+      [
+        "Dildos",
+        "Anal",
+        "Vibrators",
+        "Fetish",
+        "Accessories",
+        "Clothes",
+        "Extra Products",
+        "Lovense",
+      ].forEach((store) => {
+        const listGroup = document.createElement("div");
+        listGroup.className = "list-group";
 
-          const listWrapper = document.createElement("div");
-          listWrapper.id = "dildosList";
+        const listWrapper = document.createElement("div");
+        listWrapper.className = "dildosList";
 
-          let products = data[store];
-          if (!products) {
-            console.warn(`⚠️ No products found for store: ${store}`);
-            return;
+        const sectionHeader = document.createElement("h4");
+        sectionHeader.textContent = store;
+        sectionHeader.style.cursor = "pointer";
+        sectionHeader.addEventListener("click", () => {
+          const isOpen = listWrapper.classList.contains("opening");
+
+          if (isOpen) {
+            // Close
+            listWrapper.classList.remove("scrollable");
+            listWrapper.classList.remove("opening");
+          } else {
+            // Open
+            listWrapper.classList.add("opening");
+
+            setTimeout(() => {
+              if (listWrapper.classList.contains("opening")) {
+                listWrapper.classList.add("scrollable");
+              }
+            }, 600); // Match CSS transition duration
           }
+        });
 
-          // Sort products by numeric price ascending
-          products = products.slice().sort((a, b) => {
-            const priceA = parseFloat(a.price.replace(/[^\d\.]/g, ""));
-            const priceB = parseFloat(b.price.replace(/[^\d\.]/g, ""));
-            return priceA - priceB;
-          });
+        listGroup.appendChild(sectionHeader);
 
-          products.forEach((item) => {
-            const itemDiv = document.createElement("div");
-            itemDiv.className = "dildo-Item";
+        let products = data[store];
+        if (!products) {
+          console.warn(`⚠️ No products found for store: ${store}`);
+          return;
+        }
 
-            itemDiv.innerHTML = `
+        // Sort products by numeric price ascending
+        products = products.slice().sort((a, b) => {
+          const priceA = parseFloat(a.price.replace(/[^\d\.]/g, ""));
+          const priceB = parseFloat(b.price.replace(/[^\d\.]/g, ""));
+          return priceA - priceB;
+        });
+
+        products.forEach((item) => {
+          const itemDiv = document.createElement("div");
+          itemDiv.className = "dildo-Item";
+
+          itemDiv.innerHTML = `
             <a href="${item.link}" target="_blank">
               <p>${item.price}</p>
               <img src="${item.img}" width="100" height="100" />
             </a>
           `;
-            listWrapper.appendChild(itemDiv);
-          });
+          listWrapper.appendChild(itemDiv);
+        });
 
-          container.appendChild(listWrapper);
-        }
-      );
+        listGroup.appendChild(listWrapper);
+        container.appendChild(listGroup);
+      });
 
       // Render deals
       const dealsHeader = document.createElement("h4");
