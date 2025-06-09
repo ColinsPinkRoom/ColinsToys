@@ -1,0 +1,26 @@
+body {
+  background-color: #fafafa;
+  font-family: "Helvetica", Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("https://images.stockcake.com/public/4/2/d/42d2b457-c2cf-4c21-b78e-4175a3761a4d_large/cozy-bedroom-decor-stockcake.jpg")
+    no-repeat center center / cover;
+  filter: blur(8px) brightness(0.7);
+  z-index: -1;
+  pointer-events: none;
+}
