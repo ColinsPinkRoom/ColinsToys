@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "../style/ProductPage.css";
+import "../../style/ProductPage.css";
 
 function ProductPage() {
   const [products, setProducts] = useState(null);
@@ -48,15 +48,6 @@ function ProductPage() {
 
   return (
     <>
-      <h2 id="mainTitle">Toys for Colin</h2>
-
-      <p className="intro-text">
-        Welcome to "Toys for Colin"! This is a curated list of toys and products
-        that I think Colin would enjoy. The list is updated regularly, so check
-        back often for new additions. If you have any suggestions or want to add
-        something, feel free to let me know!
-      </p>
-
       <div id="dildosContainer" className="visible">
         {categories.map((category) => {
           const items = products[category];
@@ -118,12 +109,6 @@ function ProductPage() {
           </>
         )}
       </div>
-
-      <footer id="footer">
-        <p>
-          &copy; 2025 Dildos for Colin. All rights reserved. Power to the Booty
-        </p>
-      </footer>
     </>
   );
 }

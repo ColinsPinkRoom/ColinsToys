@@ -1,3 +1,13 @@
+html {
+  scrollbar-gutter: stable both-edges;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #fafafa;
   font-family: "Helvetica", Arial, sans-serif;
@@ -23,4 +33,18 @@ body::before {
   filter: blur(8px) brightness(0.7);
   z-index: -1;
   pointer-events: none;
+}
+
+#App {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  background-color: rgb(211 211 211 / 29%);
+  border: 2px solid #ff95d6;
+  border-radius: 12px;
+  box-shadow: #080808b0 5px 5px 10px;
+  padding: 20px;
+  min-height: 600px;
 }
