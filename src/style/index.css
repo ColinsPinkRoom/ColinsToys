@@ -1,11 +1,18 @@
+/* Ensure stable scrollbar space */
 html {
   scrollbar-gutter: stable both-edges;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Apply box-sizing globally */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 body {
@@ -13,14 +20,16 @@ body {
   font-family: "Helvetica", Arial, sans-serif;
   color: #333;
   margin: 0;
-  padding: 20px;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  /* Removed flex display from body */
+  position: relative; /* For the ::before overlay */
 }
 
+/* Background overlay */
 body::before {
   content: "";
   position: fixed;
@@ -35,16 +44,25 @@ body::before {
   pointer-events: none;
 }
 
+/* Main app container centered and responsive */
 #App {
   display: flex;
   flex-direction: column;
-
   align-items: center;
 
-  background-color: rgb(211 211 211 / 29%);
+  background-color: rgba(211, 211, 211, 0.29);
   border: 2px solid #ff95d6;
   border-radius: 12px;
-  box-shadow: #080808b0 5px 5px 10px;
+  box-shadow: 5px 5px 10px rgba(8, 8, 8, 0.69);
   padding: 20px;
   min-height: 600px;
+
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+
+  /* Optional outline for debugging */
+  /* outline: 3px solid lime; */
 }

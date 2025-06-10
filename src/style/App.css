@@ -1,0 +1,37 @@
+#loadingMessage {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#mainTitle {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #f79fcd; /* deep rose color */
+  margin-bottom: 10px;
+  font-family: "Georgia", serif;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 78%);
+  text-align: center;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ffffff;
+  max-width: 700px;
+  text-align: center;
+  margin: 5px 0;
+  font-family: "Segoe UI", sans-serif;
+  background: rgba(255, 240, 245, 0.3); /* soft blush tint */
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 50%);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 78%);
+}
+
+#footer {
+  color: #ffffff;
+}
