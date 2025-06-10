@@ -48,18 +48,13 @@ function Streaming() {
 
         return (
           <div key={category} className="list-group">
-            <h4>{category}</h4>
+            <h4 className="streaming-title">{category}</h4>
             <div className="streamingList">
               {sortedItems.map((item, index) => (
                 <div key={index} className="streaming-Item">
                   <p>{item.price}</p>
                   <a href={item.link} target="_blank" rel="noopener noreferrer">
-                    <img
-                      src={item.img}
-                      alt={item.price}
-                      width={100}
-                      height={100}
-                    />
+                    <img src={item.img} alt={item.price} />
                   </a>
                 </div>
               ))}

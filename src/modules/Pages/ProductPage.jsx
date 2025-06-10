@@ -67,6 +67,7 @@ function ProductPage() {
           return (
             <div key={category} className="list-group">
               <h4
+                className="category-title"
                 style={{ cursor: "pointer" }}
                 onClick={() => toggleSection(category)}
               >
