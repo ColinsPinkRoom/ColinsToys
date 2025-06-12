@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import "../../style/ProductPage.css";
+import "../../style/Toys.css";
 
-function ProductPage() {
+function ToysPage() {
   const [products, setProducts] = useState(null);
   const [openSections, setOpenSections] = useState({});
   const [error, setError] = useState(null);
@@ -114,4 +114,4 @@ function ProductPage() {
   );
 }
 
-export default ProductPage;
+export default ToysPage;

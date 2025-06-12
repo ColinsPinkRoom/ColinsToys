@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 import "../../style/Streaming.css";
 
-function Streaming() {
+function StreamingPage() {
   const [products, setProducts] = useState(null);
   const [error, setError] = useState(null);
 
@@ -66,4 +66,4 @@ function Streaming() {
   );
 }
 
-export default Streaming;
+export default StreamingPage;

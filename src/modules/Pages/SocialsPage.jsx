@@ -1,7 +1,7 @@
 import React from "react";
 
-function Socials() {
+function SocialsPage() {
   return <div>Socials</div>;
 }
 
-export default Socials;
+export default SocialsPage;

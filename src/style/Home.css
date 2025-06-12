@@ -5,17 +5,24 @@
   padding: 20px;
   max-width: 700px;
   width: 100%;
-  background: rgba(255, 240, 250, 0.9);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 230, 245, 0.95),
+    rgba(255, 210, 235, 0.9)
+  );
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 50%);
+  border: 1px solid rgba(255, 180, 220, 0.5);
 }
 
-/* #contentContainer {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-} */
+#homeTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ff71b2; /* Soft, vibrant pink */
+  margin-bottom: 0.8rem;
+  font-family: "Georgia", serif;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(255, 200, 230, 0.4); /* Gentle glow */
+  position: relative;
+  padding-bottom: 0.4rem;
+}
