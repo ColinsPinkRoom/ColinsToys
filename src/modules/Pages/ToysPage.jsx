@@ -3,7 +3,7 @@ import "../../style/Toys.css";
 
 function ToysPage() {
   const [products, setProducts] = useState(null);
-  const [openSections, setOpenSections] = useState({});
+  const [activeCategory, setActiveCategory] = useState("Dildos");
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -27,13 +27,6 @@ function ToysPage() {
     "Lovense",
   ];
 
-  const toggleSection = (category) => {
-    setOpenSections((prev) => ({
-      ...prev,
-      [category]: !prev[category],
-    }));
-  };
-
   if (error) {
     return (
       <div id="loadingMessage" style={{ color: "red" }}>
@@ -46,53 +39,51 @@ function ToysPage() {
     return <div id="loadingMessage">Loading products...</div>;
   }
 
+  const activeItems = products[activeCategory] || [];
+
+  const sortedItems = [...activeItems].sort((a, b) => {
+    const priceA = parseFloat(a.price.replace(/[^\d.]/g, ""));
+    const priceB = parseFloat(b.price.replace(/[^\d.]/g, ""));
+    return priceA - priceB;
+  });
+
   return (
     <>
       <div id="dildosContainer" className="visible">
-        {categories.map((category) => {
-          const items = products[category];
-          if (!items || !Array.isArray(items)) {
-            console.warn(`⚠️ No products found for category: ${category}`);
-            return null;
-          }
-
-          const sortedItems = [...items].sort((a, b) => {
-            const priceA = parseFloat(a.price.replace(/[^\d.]/g, ""));
-            const priceB = parseFloat(b.price.replace(/[^\d.]/g, ""));
-            return priceA - priceB;
-          });
-
-          const isOpen = openSections[category];
-
-          return (
-            <div key={category} className="list-group">
-              <h4
-                className="category-title"
-                style={{ cursor: "pointer" }}
-                onClick={() => toggleSection(category)}
+        <div className="category-layout">
+          <div className="category-menu">
+            {categories.map((category) => (
+              <button
+                key={category}
+                className={`category-tab ${
+                  activeCategory === category ? "active" : ""
+                }`}
+                onClick={() => setActiveCategory(category)}
               >
                 {category}
-              </h4>
-              <div
-                className={`dildosList ${isOpen ? "opening scrollable" : ""}`}
-              >
-                {sortedItems.map((item, index) => (
-                  <div key={index} className="dildo-Item">
-                    <a href={item.link} target="_blank" rel="noreferrer">
-                      <p>{item.price}</p>
-                      <img
-                        src={item.img}
-                        width={100}
-                        height={100}
-                        alt={item.price}
-                      />
-                    </a>
-                  </div>
-                ))}
-              </div>
+              </button>
+            ))}
+          </div>
+
+          <div className="category-content">
+            <h4 className="category-title">{activeCategory}</h4>
+            <div className="dildosList opening scrollable">
+              {sortedItems.map((item, index) => (
+                <div key={index} className="dildo-Item">
+                  <a href={item.link} target="_blank" rel="noreferrer">
+                    <p>{item.price}</p>
+                    <img
+                      src={item.img}
+                      width={100}
+                      height={100}
+                      alt={item.price}
+                    />
+                  </a>
+                </div>
+              ))}
             </div>
-          );
-        })}
+          </div>
+        </div>
 
         {/* Deals Section */}
         {Array.isArray(products.deals) && (

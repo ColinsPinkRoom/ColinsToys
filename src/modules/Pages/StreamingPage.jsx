@@ -52,8 +52,8 @@ function StreamingPage() {
             <div className="streamingList">
               {sortedItems.map((item, index) => (
                 <div key={index} className="streaming-Item">
-                  <p>{item.price}</p>
                   <a href={item.link} target="_blank" rel="noopener noreferrer">
+                    <p>{item.price}</p>
                     <img src={item.img} alt={item.price} />
                   </a>
                 </div>
