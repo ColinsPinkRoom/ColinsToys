@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import Navigation from "./modules/Navigation.jsx";
-import HomePage from "./modules/Pages/HomePage.jsx";
-import ToysPage from "./modules/Pages/ToysPage.jsx";
-import StreamingPage from "./modules/Pages/StreamingPage.jsx";
-import ContactPage from "./modules/Pages/ContactPage.jsx";
-import SocialsPage from "./modules/Pages/SocialsPage.jsx";
+import Navigation from "./components/Navigation.jsx";
+import HomePage from "./components/Pages/HomePage.jsx";
+import ToysPage from "./components/Pages/ToysPage.jsx";
+import StreamingPage from "./components/Pages/StreamingPage.jsx";
+import ContactPage from "./components/Pages/ContactPage.jsx";
+import SocialsPage from "./components/Pages/SocialsPage.jsx";
 
 import "./style/App.css";
 
