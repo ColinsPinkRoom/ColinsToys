@@ -48,6 +48,7 @@ function SocialsPage() {
           width={300}
           alt="Socials"
           className="socials-image"
+          loading="lazy"
         />
       </div>
     </div>
