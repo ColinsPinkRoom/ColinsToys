@@ -1,17 +1,23 @@
 import { Routes, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 import Navigation from "./components/Navigation.jsx";
 import HomePage from "./components/Pages/HomePage.jsx";
 import ToysPage from "./components/Pages/ToysPage.jsx";
 import StreamingPage from "./components/Pages/StreamingPage.jsx";
 import ContactPage from "./components/Pages/ContactPage.jsx";
 import SocialsPage from "./components/Pages/SocialsPage.jsx";
+import PricesPage from "./components/Pages/PricesPage.jsx";
 
 import "./style/App.css";
 
 function App() {
   return (
     <div id="App">
-      <h2 id="mainTitle">Colins Pink Room</h2>
+      <Link to="">
+        <h2 id="mainTitle">Colins Pink Room</h2>
+      </Link>
+
       <Navigation />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -19,6 +25,7 @@ function App() {
         <Route path="/streaming" element={<StreamingPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/socials" element={<SocialsPage />} />
+        <Route path="/prices" element={<PricesPage />} />
       </Routes>
       <footer id="footer">
         <p>

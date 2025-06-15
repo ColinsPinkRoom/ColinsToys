@@ -26,11 +26,15 @@ export default function Navigation() {
           <Link className="nav-button" to="/streaming">
             Streaming
           </Link>
-          <Link className="nav-button" to="/contact">
-            Contact
+          <Link className="nav-button" to="/prices">
+            Prices
           </Link>
+
           <Link className="nav-button" to="/socials">
             Socials
+          </Link>
+          <Link className="nav-button" to="/contact">
+            Contact
           </Link>
         </div>
       </nav>
@@ -54,6 +58,9 @@ export default function Navigation() {
         </Link>
         <Link className="drawer-link" to="/socials" onClick={closeMenu}>
           Socials
+        </Link>
+        <Link className="drawer-link" to="/prices" onClick={closeMenu}>
+          Prices
         </Link>
       </div>
 
