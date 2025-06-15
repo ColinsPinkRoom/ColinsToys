@@ -209,45 +209,300 @@
     {
       "price": "169 kr",
       "link": "https://www.mshop.se/bdsm-drip-candles-2pcs",
-      "img": "https://www.mshop.se/image/product/17006/gallery/51218/c81a0c2e52640007f21fb90aa81c34e6/bdsm-drip-candles-2pcs-600x600.jpg"
+      "img": "https://www.mshop.se/image/product/17006/gallery/51218/c81a0c2e52640007f21fb90aa81c34e6/bdsm-drip-candles-2pcs-600x600.jpg",
+      "sub": "BDSM"
     },
     {
       "price": "129 kr",
       "link": "https://www.mshop.se/japanese-drip-candles-3pack",
-      "img": "https://www.mshop.se/image/product/14027/gallery/26620/5c293bd57bf3418a62d80888ebeff6c9/japanese-drip-candles-3pack-600x600.jpg"
+      "img": "https://www.mshop.se/image/product/14027/gallery/26620/5c293bd57bf3418a62d80888ebeff6c9/japanese-drip-candles-3pack-600x600.jpg",
+      "sub": "BDSM"
     },
     {
       "price": "99 kr",
       "link": "https://www.mshop.se/svart-fjader",
-      "img": "https://www.mshop.se/image/product/10802/gallery/3405/eb30f4786f56520909ff3bb47aaa3da9/svart-fjader-600x600.jpg"
+      "img": "https://www.mshop.se/image/product/10802/gallery/3405/eb30f4786f56520909ff3bb47aaa3da9/svart-fjader-600x600.jpg",
+      "sub": "BDSM"
     },
     {
       "price": "149 kr",
       "link": "https://www.mshop.se/lust-tiefold",
-      "img": "https://www.mshop.se/image/product/8627/gallery/41440/a4c1d8e69640a3dc0bb7456e9e3905e3/lust-tiefold-600x600.jpg"
+      "img": "https://www.mshop.se/image/product/8627/gallery/41440/a4c1d8e69640a3dc0bb7456e9e3905e3/lust-tiefold-600x600.jpg",
+      "sub": "BDSM"
     },
     {
       "price": "369 kr",
       "link": "https://www.mshop.se/spreader-string-with-vibrator",
-      "img": "https://www.mshop.se/image/product/16237/gallery/47240/4b03a4f8386d4e64c81a77d1450dadf0/spreader-string-with-vibrator-600x600.jpg"
+      "img": "https://www.mshop.se/image/product/16237/gallery/47240/4b03a4f8386d4e64c81a77d1450dadf0/spreader-string-with-vibrator-600x600.jpg",
+      "sub": "BDSM"
     },
     {
       "price": "499 kr",
       "link": "https://www.mshop.se/position-master-with-cuffs",
-      "img": "https://www.mshop.se/image/product/8953/gallery/36717/5458c77aeff56eee4da6970f7efb38c3/position-master-with-cuffs-600x600.jpg"
+      "img": "https://www.mshop.se/image/product/8953/gallery/36717/5458c77aeff56eee4da6970f7efb38c3/position-master-with-cuffs-600x600.jpg",
+      "sub": "BDSM"
     },
     {
       "price": "399 kr",
       "link": "https://www.sinful.se/p/doc-johnson-pussy-pump/1014540",
-      "img": "https://eu-images.contentstack.com/v3/assets/blt70200aeea7ce7e0e/blt1ccc50ddb2ef2912/673f052326b8642a5fed4fa6/14540-doc-johnson-pussy-pump_01_product.jpg?quality=90&width=750&height=auto&format=webp&auto=webp&disable=upscale"
+      "img": "https://eu-images.contentstack.com/v3/assets/blt70200aeea7ce7e0e/blt1ccc50ddb2ef2912/673f052326b8642a5fed4fa6/14540-doc-johnson-pussy-pump_01_product.jpg?quality=90&width=750&height=auto&format=webp&auto=webp&disable=upscale",
+      "sub": "Pumps"
+    },
+    {
+      "price": "469 kr",
+      "link": "https://www.mshop.se/criss-cross-bra",
+      "img": "https://www.mshop.se/image/product/17022/gallery/51305/fe381c7c79d84814da30e7413db40549/criss-cross-bra-600x600.jpg",
+      "sub": "Harness"
+    },
+    {
+      "price": "969 kr",
+      "link": "https://www.mshop.se/body-harness-with-thigh-and-hand-cuffs-black",
+      "img": "https://www.mshop.se/image/product/17132/gallery/52050/a7168151d8ec4e58ee28bce94d39b9f7/body-harness-with-thigh-and-hand-cuffs-black-600x600.jpg",
+      "sub": "Harness"
+    },
+    {
+      "price": "369 kr",
+      "link": "https://www.mshop.se/satin-elastic-harness-teddy",
+      "img": "https://www.mshop.se/image/product/17031/gallery/51373/3067c268e2006d227def27039ad42d16/satin-elastic-harness-teddy-600x600.jpg",
+      "sub": "Harness"
     }
   ],
-  "Clothes": [],
+  "Clothes": [
+    {
+      "price": "830 kr",
+      "link": "https://www.hoga-klackar.com/en/mules-heel-mini-platform/transparent-15-cm-kiss-201-platform-high-mules.html",
+      "img": "https://www.hoga-klackar.com/damskor/klackskor/info_images/Transparent-15-cm-KISS-201-Platform-High-Mules-6338_0.jpg",
+      "sub": "Shoes"
+    },
+    {
+      "price": "920 kr",
+      "link": "https://www.hoga-klackar.com/en/high-heels-mini-platform/rose-15-cm-delight-609-platform-pleaser-high-heels-shoes.html",
+      "img": "https://www.hoga-klackar.com/damskor/klackskor/info_images/Rose-15-cm-DELIGHT-609-platform-pleaser-high-heels-shoes-14340_0.jpg",
+      "sub": "Shoes"
+    },
+    {
+      "price": "1000 kr",
+      "link": "https://www.hoga-klackar.com/en/high-heels-more-platform/black-shiny-18-cm-pleaser-sky-309-platform-high-heels-shoes.html",
+      "img": "https://www.hoga-klackar.com/damskor/klackskor/info_images/Black-Shiny-18-cm-Pleaser-SKY-309-Platform-High-Heels-Shoes-8064_0.jpg",
+      "sub": "Shoes"
+    },
+    {
+      "price": "1030 kr",
+      "link": "https://www.hoga-klackar.com/en/high-heels-mini-platform/hologram-13-cm-dolly-09-platform-demoniacult-chunky-high-heels-shoes.html",
+      "img": "https://www.hoga-klackar.com/damskor/klackskor/info_images/Hologram-13-cm-DOLLY-09-platform-demoniacult-chunky-high-heels-shoes-12341_0.jpg",
+      "sub": "Shoes"
+    },
+    {
+      "price": "129 kr",
+      "link": "https://www.mshop.se/penthouse-classified-black",
+      "img": "https://www.mshop.se/image/product/15248/gallery/40725/a7e856b142b30cf390de9bcedb0e85a0/penthouse-classified-s-m-black-600x600.jpg",
+      "sub": "Underwear"
+    },
+    {
+      "price": "199 kr",
+      "link": "https://www.mshop.se/le-desir-claire-black",
+      "img": "https://www.mshop.se/image/product/15322/gallery/41667/00f498c16a021b585cd16c52422548b1/le-desir-claire-black-osx-600x600.jpg",
+      "sub": "Underwear"
+    },
+    {
+      "price": "169 kr",
+      "link": "https://www.mshop.se/le-desir-aime-black",
+      "img": "https://www.mshop.se/image/product/15306/gallery/41538/0862561358f03ab05f1193110b75c4cb/le-desir-aime-black-os-600x600.jpg",
+      "sub": "Underwear"
+    },
+    {
+      "price": "199 kr",
+      "link": "https://www.mshop.se/le-desir-marie-black",
+      "img": "https://www.mshop.se/image/product/15327/gallery/41726/54511c907afc4750e1d11781d87c6f0b/le-desir-marie-black-os-600x600.jpg",
+      "sub": "Underwear"
+    },
+    {
+      "price": "199 kr",
+      "link": "https://www.mshop.se/le-desir-faye-black",
+      "img": "https://www.mshop.se/image/product/15331/gallery/41776/cd1f17e5169c31949bcc1aeb6a66cec2/le-desir-faye-black-os-600x600.jpg",
+      "sub": "Underwear"
+    },
+    {
+      "price": "199 kr",
+      "link": "https://www.mshop.se/le-desir-lena-black",
+      "img": "https://www.mshop.se/image/product/15318/gallery/41612/63af7bcd055483ed54016ea88a13402a/le-desir-lena-black-osx-600x600.jpg",
+      "sub": "Underwear"
+    },
+    {
+      "price": "399 kr",
+      "link": "https://www.mshop.se/diva-lace-set-red",
+      "img": "https://www.mshop.se/image/product/13627/gallery/21850/5f654639523908bcd68d4dffd2ef3bd0/diva-lace-set-red-xl-600x600.jpg",
+      "sub": "Underwear"
+    },
+    {
+      "price": "369 kr",
+      "link": "https://www.mshop.se/diva-open-slip",
+      "img": "https://www.mshop.se/image/product/17028/gallery/51345/9daa8a1a7d96a5c2c7fa53475ae57157/diva-open-slip-600x600.jpg",
+      "sub": "Underwear"
+    },
+    {
+      "price": "549 kr",
+      "link": "https://www.mshop.se/open-cup-bra-deluxe",
+      "img": "https://www.mshop.se/image/product/17020/gallery/51296/a45dd6c38961ff0492320babf1e0c198/open-cup-bra-deluxe-600x600.jpg",
+      "sub": "Underwear"
+    },
+    {
+      "price": "299 kr",
+      "link": "https://www.sinful.se/p/obsessive-giftella-rosett-bh-set/1027627?variantSku=27629",
+      "img": "https://eu-images.contentstack.com/v3/assets/blt70200aeea7ce7e0e/blt52eec5c282cd65b1/638757a0f723651af3a8babb/27627-obsessive-red-bow-bra-set_01_product_q100_1_1.jpg?quality=90&width=750&height=auto&format=webp&auto=webp&disable=upscale",
+      "sub": "Underwear"
+    },
+    {
+      "price": "299 kr",
+      "link": "https://www.mshop.se/cottelli-crotchless-tights-lace-pantie-xl",
+      "img": "https://www.mshop.se/image/product/17340/gallery/53818/f32a66dca5342764b040a37dba34cb1b/cottelli-crotchless-tights-lace-pantie-xl-600x600.jpg",
+      "sub": "Tights"
+    },
+    {
+      "price": "299 kr",
+      "link": "https://www.mshop.se/cottelli-crotchless-tights-lace-xl",
+      "img": "https://www.mshop.se/image/product/17335/gallery/53777/6006ece14021a3d15a5ee6858c6bcf91/cottelli-crotchless-tights-lace-xl-600x600.jpg",
+      "sub": "Tights"
+    },
+    {
+      "price": "119 kr",
+      "link": "https://www.mshop.se/oppen-strumpbyxa",
+      "img": "https://www.mshop.se/image/product/7136/gallery/20607/c7b08fedce20aaf00d183d6b92401a69/oppen-strumpbyxa-small-600x600.jpg",
+      "sub": "Tights"
+    },
+    {
+      "price": "249 kr",
+      "link": "https://www.mshop.se/cottelli-crotchless-tights-xl",
+      "img": "https://www.mshop.se/image/product/17331/gallery/53744/b39fcd155c194b31e8bc140ed2c969e8/cottelli-crotchless-tights-xl-600x600.jpg",
+      "sub": "Tights"
+    },
+    {
+      "price": "119 kr",
+      "link": "https://www.mshop.se/open-crotch-nude-tights",
+      "img": "https://www.mshop.se/image/product/10112/gallery/2608/f84387e0c64240ec6e1851f6b673e1cd/open-crotch-nude-tights-small-600x600.jpg",
+      "sub": "Tights"
+    },
+    {
+      "price": "129 kr",
+      "link": "https://www.mshop.se/penthouse-no-excuses-black",
+      "img": "https://www.mshop.se/image/product/15191/gallery/40936/a0c392b6ce916dc77124d5f4cc8ce422/penthouse-no-excuses-s-l-black-600x600.jpg",
+      "sub": "Tights"
+    },
+    {
+      "price": "499 kr",
+      "link": "https://www.sinful.se/p/late-x-langa-latexstrumpor/1013159?variantSku=13162",
+      "img": "https://eu-images.contentstack.com/v3/assets/blt70200aeea7ce7e0e/blt1be7c385d91731d4/63872c8eb08a9911cffde586/13159-late-x-log-latex-socks(1).jpg?quality=90&width=750&height=auto&format=webp&auto=webp&disable=upscale",
+      "sub": "Tights"
+    },
+    {
+      "price": "399 kr",
+      "link": "https://www.sinful.se/p/late-x-langa-roda-latexstrumpor/1017729?variantSku=17731",
+      "img": "https://eu-images.contentstack.com/v3/assets/blt70200aeea7ce7e0e/bltd0c01f27fb112d21/638735a4c69354115aed2011/17729-late-x-latex-lange-stromper-rod_01_q100.jpg?quality=90&width=750&height=auto&format=webp&auto=webp&disable=upscale",
+      "sub": "Tights"
+    },
+    {
+      "price": "499 kr",
+      "link": "https://www.mshop.se/katherine-babydoll-black",
+      "img": "https://www.mshop.se/image/product/15833/gallery/44621/e032a7aaea875f6bf5fb9b3eb828a046/katherine-babydoll-black-xl-600x600.jpg",
+      "sub": "Babydoll"
+    },
+    {
+      "price": "349 kr",
+      "link": "https://www.vuxen.se/lingerie/sexiga-underklader/nattplag/cottellicollection-babydoll-pink-s?ssr=on&loadfailure=1",
+      "img": "https://www.vuxen.se/globalassets/27400523021_nor_a.jpg?ref=34880&w=640",
+      "sub": "Babydoll"
+    },
+    {
+      "price": "199 kr",
+      "link": "https://www.mshop.se/glow-in-the-dark-turtle-neck-and-high-waist-slip-green",
+      "img": "https://www.mshop.se/image/product/17114/gallery/52170/0cc146676e72c9a523e1962234ebacfe/glow-in-the-dark-turtle-neck-and-high-waist-slip-green-os-600x600.jpg",
+      "sub": "Body"
+    },
+    {
+      "price": "199 kr",
+      "link": "https://www.mshop.se/glow-in-the-dark-high-cut-body-green",
+      "img": "https://www.mshop.se/image/product/17122/gallery/52115/0651c2f4e37a416371fb5c5684b38b5b/glow-in-the-dark-high-cut-body-green-os-600x600.jpg",
+      "sub": "Body"
+    },
+    {
+      "price": "199 kr",
+      "link": "https://www.mshop.se/glow-in-the-dark-high-cut-body-pink",
+      "img": "https://www.mshop.se/image/product/17124/gallery/52108/2fee06fa5ce078b60ee2be6203885fc8/glow-in-the-dark-high-cut-body-pink-os-600x600.jpg",
+      "sub": "Body"
+    },
+    {
+      "price": "1999 kr",
+      "link": "https://www.mshop.se/gp-catsuit-with-zipper-in-the-back-red",
+      "img": "https://www.mshop.se/image/product/16880/gallery/50286/6a9fa84e2f6b801785c66bd071a130dd/gp-catsuit-with-zipper-in-the-back-red-s-600x600.jpg",
+      "sub": "Body"
+    },
+    {
+      "price": "549 kr",
+      "link": "https://www.mshop.se/multi-chaintop-deluxe",
+      "img": "https://www.mshop.se/image/product/17026/gallery/51332/95b328ecba5c75c4ba65e745e7a6807d/multi-chaintop-deluxe-600x600.jpg",
+      "sub": "Collar"
+    },
+    {
+      "price": "249 kr",
+      "link": "https://www.mshop.se/ff-spandex-3-hole-hood",
+      "img": "https://www.mshop.se/image/product/13794/gallery/23108/b361ed9cf206da3618cd8fd8232ba8c1/ff-spandex-3-hole-hood-600x600.jpg",
+      "sub": "Face"
+    },
+    {
+      "price": "489 kr",
+      "link": "https://www.mshop.se/suspender-belt-deluxe",
+      "img": "https://www.mshop.se/image/product/17021/gallery/51297/80f05802144b5f78fac91463520e6f9e/suspender-belt-deluxe-600x600.jpg",
+      "sub": "Suspenders"
+    },
+    {
+      "price": "1399 kr",
+      "link": "https://www.vuxen.se/lingerie/klader/clubwear/latex-latex-dress-peephole-xl",
+      "img": "https://www.vuxen.se/globalassets/29003861021_lx_kleid_c.jpg?ref=1806&w=640",
+      "sub": "Dresses"
+    },
+    {
+      "price": "299 kr",
+      "link": "https://www.sinful.se/p/late-x-korta-handskar/1028315?_gl=1*k1mtj2*_up*MQ..&gclid=CjwKCAiAq4KuBhA6EiwArMAw1IfilWfbnlr6lib8zICcw8h-FTrPjQf6-CEXrWKB9xYz_vGTuN4snhoCh_IQAvD_BwE&variantSku=28319",
+      "img": "https://eu-images.contentstack.com/v3/assets/blt70200aeea7ce7e0e/bltb4eeddfbf9998ea4/64620517182e70090d101cc1/28315-late-x-gloves_01_product_q100.jpg?quality=90&width=750&height=auto&format=webp&auto=webp&disable=upscale",
+      "sub": "Gloves"
+    },
+    {
+      "price": "549 kr",
+      "link": "https://www.sinful.se/p/obsessive-bunny-kostym/1020746?variantSku=20748",
+      "img": "https://eu-images.contentstack.com/v3/assets/blt70200aeea7ce7e0e/blt11a21aa841ab47e0/63873b8f02cef419e57c12d8/20746-obsessive-bunny-kostume-q100-04.jpg?quality=90&width=750&height=auto&format=webp&auto=webp&disable=upscale",
+      "sub": "Cosplay"
+    },
+    {
+      "price": "499 kr",
+      "link": "https://www.sinful.se/p/obsessive-gepardina-wild-kitty-kostym/1026689?variantSku=26691",
+      "img": "https://eu-images.contentstack.com/v3/assets/blt70200aeea7ce7e0e/blt232f5267619ca289/638774a7a80f6e447ea87318/26689-obsessive-black-cheetah-costume_01_product_q100.jpg?quality=90&width=750&height=auto&format=webp&auto=webp&disable=upscale",
+      "sub": "Cosplay"
+    }
+  ],
   "Accessories": [
     {
       "price": "499 kr",
       "link": "https://www.mshop.se/strap-on-harnes",
-      "img": "https://www.mshop.se/image/product/12282/gallery/35222/a4abaf35bc38024923b837e53da392d2/strap-on-harnes-600x600.jpg"
+      "img": "https://www.mshop.se/image/product/12282/gallery/35222/a4abaf35bc38024923b837e53da392d2/strap-on-harnes-600x600.jpg",
+      "sub": "Strap-on"
+    },
+    {
+      "price": "169 kr",
+      "link": "https://www.mshop.se/blaze-deluxe-nipple-clamps",
+      "img": "https://www.mshop.se/image/product/15964/gallery/45279/541c952bf4e04466cc10cae29f3bc6ea/blaze-deluxe-nipple-clamps-600x600.jpg",
+      "sub": "Clamps"
+    },
+    {
+      "price": "159 kr",
+      "link": "https://www.mshop.se/glow-in-the-dark-body-jewelry-chest-stickers",
+      "img": "https://www.mshop.se/image/product/17131/gallery/52063/0bb6660d91a84242291872288c4a8185/glow-in-the-dark-body-jewelry-chest-stickers-600x600.jpg",
+      "sub": "Stickers"
+    },
+    {
+      "price": "149 kr",
+      "link": "https://www.mshop.se/bijoux-indiscrets-burlesque-pasties-black",
+      "img": "https://www.mshop.se/image/product/11992/gallery/7151/6e6ad38c7246dfecc7240e77b27b527a/bijoux-indiscrets-burlesque-pasties-black-600x600.jpg",
+      "sub": "Stickers"
     }
   ],
   "Extra Products": [
