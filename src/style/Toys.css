@@ -205,4 +205,8 @@ a:hover {
     background: rgba(139, 58, 98, 0.4);
     border-radius: 3px;
   }
+
+  .subcategory-menu {
+    flex-direction: column;
+  }
 }
