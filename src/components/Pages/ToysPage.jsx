@@ -29,7 +29,7 @@ function ToysPage() {
     return <div id="loadingMessage">Loading products...</div>;
   }
 
-  // Get categories in object key order, excluding 'deals'
+  // Get categories in object key order'
   const categories = Object.keys(products).filter((key) => key !== "deals");
 
   const activeItems = products[activeCategory] || [];
@@ -111,22 +111,6 @@ function ToysPage() {
             </div>
           ))}
         </div>
-
-        {/* Deals Section */}
-        {Array.isArray(products.deals) && (
-          <>
-            <h4>DEALS</h4>
-            <div id="dealList">
-              {products.deals.map((deal, index) => (
-                <div key={index} className="deal-Item">
-                  <a href={deal.link} target="_blank" rel="noreferrer">
-                    <h4>{deal.text}</h4>
-                  </a>
-                </div>
-              ))}
-            </div>
-          </>
-        )}
       </div>
     </>
   );

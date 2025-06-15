@@ -182,3 +182,21 @@ hr {
   background: rgba(139, 58, 98, 0.3);
   border-radius: 3px;
 }
+
+/* --- Mobile styles --- */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+  .nav-bar {
+    display: none;
+  }
+
+  #mainTitle {
+    margin-bottom: 40px;
+  }
+}

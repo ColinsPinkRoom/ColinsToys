@@ -22,7 +22,7 @@ function App() {
       </Routes>
       <footer id="footer">
         <p>
-          &copy; 2025 Dildos for Colin. All rights reserved. Power to the Booty
+          &copy; 2025 Colins Pink Room. All rights reserved. Power to the Booty
         </p>
       </footer>
     </div>
