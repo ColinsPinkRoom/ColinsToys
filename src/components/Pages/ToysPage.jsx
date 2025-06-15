@@ -53,7 +53,7 @@ function ToysPage() {
 
   return (
     <>
-      <div id="dildosContainer" className="visible">
+      <div className="dildos-container">
         <div className="category-layout">
           <div className="category-menu">
             {categories.map((category) => (

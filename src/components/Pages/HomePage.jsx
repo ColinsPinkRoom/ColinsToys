@@ -4,7 +4,7 @@ import "../../style/Home.css"; // Ensure you have a CSS file for styling
 
 function HomePage() {
   return (
-    <div id="homeContainer">
+    <div className="home-container">
       <h2 id="homeTitle">Welcome to Colins Pink Room!</h2>
       <hr className="hr-underline" />
       <p>

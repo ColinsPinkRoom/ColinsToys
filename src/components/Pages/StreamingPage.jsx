@@ -42,7 +42,7 @@ function StreamingPage() {
 
   return (
     <>
-      <div id="streamingContainer" className="visible">
+      <div className="streaming-container">
         <div className="category-layout">
           <div className="category-menu">
             {categories.map((category) => (

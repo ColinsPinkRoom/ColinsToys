@@ -1,6 +1,6 @@
 /* DILDOS CONTAINER & LIST */
 
-#dildosContainer {
+.dildos-container {
   display: flex;
   flex-direction: column;
   align-items: center;
