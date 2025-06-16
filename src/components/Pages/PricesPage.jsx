@@ -30,18 +30,29 @@ function PricesPage() {
   return (
     <div className="prices-container">
       <h2 className="prices-title">Prices</h2>
-      <div className="prices-links">
-        {Object.entries(products).map(([category, items]) => (
-          <div className="prices-section" key={category}>
+      <div className="prices-grid">
+        {Object.entries(products).map(([category, items], index) => (
+          <div
+            className={`prices-category grid-area-${index}`}
+            key={category}
+            style={{ gridArea: `area${index}` }}
+          >
             <h3 className="category-title">{category}</h3>
-            {items.map((item, index) => (
-              <div className="prices-box" key={index}>
-                <h4 className="item-name">{item.name}</h4>
-                <h4 className="item-price">${item.price}</h4>
+            {items.map((item, itemIndex) => (
+              <div className="prices-box" key={itemIndex}>
+                <span className="item-name">{item.name}</span>
+                <span className="item-price">${item.price}</span>
               </div>
             ))}
           </div>
         ))}
+      </div>
+
+      <div className="payment-note">
+        <h3>Payment method</h3>
+        <p>
+          <strong>Throne, Wise, Zen, PayPal</strong>
+        </p>
       </div>
     </div>
   );

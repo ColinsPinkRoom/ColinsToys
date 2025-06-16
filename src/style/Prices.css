@@ -30,7 +30,7 @@
   gap: 32px;
 }
 
-.prices-section {
+.prices-category {
   background-color: #fff8fb;
   padding: 16px;
   border-radius: 12px;
@@ -60,4 +60,41 @@
 .item-price {
   font-weight: bold;
   color: #8b2e4e;
+}
+
+.payment-note {
+  font-size: 14px;
+  color: #6e2f4f;
+  margin-top: 16px;
+  text-align: center;
+  line-height: 1.5;
+  background-color: #fff8fb;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #f1cbd7;
+}
+
+.prices-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "area0 area0 area1 area1"
+    ". area2 area2 ."
+    ". area3 area3 ."
+    "area4 area4 area5 area5";
+  gap: 32px;
+}
+
+/* Mobile: stack everything */
+@media (max-width: 600px) {
+  .prices-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "area0"
+      "area1"
+      "area2"
+      "area3"
+      "area4"
+      "area5";
+  }
 }
