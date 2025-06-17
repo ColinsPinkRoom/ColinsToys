@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="346.20157"
+   height="83.157639"
+   viewBox="0 0 91.59916 22.002125"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter44"
+       x="-0.060000628"
+       y="-0.5304617"
+       width="1.1450015"
+       height="2.2819491">
+      <feFlood
+         result="flood"
+         in="SourceGraphic"
+         flood-opacity="0.454902"
+         flood-color="rgb(0,53,251)"
+         id="feFlood43" />
+      <feGaussianBlur
+         result="blur"
+         in="SourceGraphic"
+         stdDeviation="2.000000"
+         id="feGaussianBlur43" />
+      <feOffset
+         result="offset"
+         in="blur"
+         dx="2.000000"
+         dy="2.000000"
+         id="feOffset43" />
+      <feComposite
+         result="comp1"
+         operator="in"
+         in="offset"
+         in2="flood"
+         id="feComposite43" />
+      <feComposite
+         result="comp2"
+         operator="over"
+         in="SourceGraphic"
+         in2="comp1"
+         id="feComposite44" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter52"
+       x="-0.15104936"
+       y="-0.38789466"
+       width="1.3020987"
+       height="1.7757893">
+      <feGaussianBlur
+         stdDeviation="0.10317026"
+         id="feGaussianBlur52" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter52-1"
+       x="-0.13660523"
+       y="-0.34526869"
+       width="1.2732105"
+       height="1.690535">
+      <feGaussianBlur
+         stdDeviation="0.10317026"
+         id="feGaussianBlur52-6" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter52-1-2"
+       x="-0.14346427"
+       y="-0.41505779"
+       width="1.2869285"
+       height="1.8301136">
+      <feGaussianBlur
+         stdDeviation="0.10317026"
+         id="feGaussianBlur52-6-5" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter53"
+       x="-0.070890958"
+       y="-0.070890958"
+       width="1.1417819"
+       height="1.1417819">
+      <feGaussianBlur
+         stdDeviation="0.13411465"
+         id="feGaussianBlur53" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter53-8"
+       x="-0.070890958"
+       y="-0.070890958"
+       width="1.1417819"
+       height="1.1417819">
+      <feGaussianBlur
+         stdDeviation="0.13411465"
+         id="feGaussianBlur53-6" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter53-0"
+       x="-0.070890958"
+       y="-0.070890958"
+       width="1.1417819"
+       height="1.1417819">
+      <feGaussianBlur
+         stdDeviation="0.13411465"
+         id="feGaussianBlur53-9" />
+    </filter>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-116.88184,-96.757551)">
+    <g
+       id="g57">
+      <rect
+         style="display:none;fill:#ffe4ec;fill-opacity:1;stroke:#dddddd;stroke-width:0.264583;stroke-dasharray:none;stroke-opacity:1;image-rendering:auto"
+         id="rect2"
+         width="171.97917"
+         height="33.337502"
+         x="76.691833"
+         y="-125.58475"
+         ry="2.1166666"
+         transform="scale(1,-1)" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.70417px;font-family:'Lily Script One';-inkscape-font-specification:'Lily Script One';fill:#ff1493;fill-opacity:1;stroke:#dddddd;stroke-width:0;stroke-dasharray:none"
+         x="142.7178"
+         y="117.93179"
+         id="text1"><tspan
+           id="tspan1"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.70417px;font-family:Raleway;-inkscape-font-specification:Raleway;fill:#555555;fill-opacity:0.560784;stroke-width:0"
+           x="142.7178"
+           y="117.93179">My Room, Your Fantasy</tspan></text>
+      <g
+         id="g56"
+         transform="translate(-1.0000029)">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;font-family:'Lily Script One';-inkscape-font-specification:'Lily Script One';fill:#ff1493;fill-opacity:1;stroke:#dddddd;stroke-width:0;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter44)"
+           x="122.36434"
+           y="109.61144"
+           id="text2"><tspan
+             id="tspan2"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;font-family:'Lily Script One';-inkscape-font-specification:'Lily Script One';fill:#ff1493;fill-opacity:1;stroke-width:0;stroke-dasharray:none"
+             x="122.36434"
+             y="109.61144">Colins Pink Room</tspan></text>
+        <g
+           id="g55">
+          <path
+             style="opacity:0.664368;mix-blend-mode:normal;fill:#ff1493;fill-opacity:1;stroke:#dddddd;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;filter:url(#filter53-0)"
+             id="path53-1"
+             d="m 102.63922,103.98215 -1.56484,-1.49696 -2.080296,0.60166 1.496966,-1.56483 -0.60167,-2.080296 1.56484,1.496966 2.08029,-0.60167 -1.49696,1.56484 z"
+             transform="matrix(0.18538792,-0.06382632,0.06675706,0.19390044,176.68392,93.598621)" />
+          <path
+             style="opacity:0.855172;fill:#ffffff;fill-opacity:0.560784;stroke:#dddddd;stroke-width:0.0529167;stroke-linecap:round;stroke-dasharray:none;filter:url(#filter52)"
+             d="m 124.69772,102.37072 c 0.25449,-0.22266 0.54883,-0.39965 0.86482,-0.52003 0.3029,-0.1154 0.62555,-0.17877 0.9496,-0.18652"
+             id="path52" />
+          <path
+             style="opacity:0.855172;fill:#ffffff;fill-opacity:0.560784;stroke:#dddddd;stroke-width:0.0529167;stroke-linecap:round;stroke-dasharray:none;filter:url(#filter52-1)"
+             d="m 124.50987,102.50262 c 0.28497,-0.30808 0.64969,-0.54177 1.04867,-0.67191 0.3076,-0.10034 0.63501,-0.13951 0.9576,-0.11458"
+             id="path52-1"
+             transform="translate(29.205074,0.08727458)" />
+          <path
+             style="opacity:0.855172;fill:#ffffff;fill-opacity:0.560784;stroke:#dddddd;stroke-width:0.0529167;stroke-linecap:round;stroke-dasharray:none;filter:url(#filter52-1-2)"
+             d="m 124.60579,102.37072 c 0.27487,-0.24434 0.60191,-0.42971 0.95275,-0.54001 0.30844,-0.097 0.63498,-0.13605 0.9576,-0.11458"
+             id="path52-1-8"
+             transform="matrix(0.79397188,0,0,1.0592325,77.034013,-5.8230747)" />
+          <path
+             style="opacity:0.664368;mix-blend-mode:normal;fill:#ff1493;fill-opacity:1;stroke:#dddddd;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;filter:url(#filter53-8)"
+             id="path53-0"
+             d="m 102.63922,103.98215 -1.56484,-1.49696 -2.080296,0.60166 1.496966,-1.56483 -0.60167,-2.080296 1.56484,1.496966 2.08029,-0.60167 -1.49696,1.56484 z"
+             transform="matrix(0.17830208,-0.08155274,0.08529742,0.18648924,146.45356,96.225454)" />
+          <path
+             style="opacity:0.664368;mix-blend-mode:normal;fill:#ff1493;fill-opacity:1;stroke:#dddddd;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;filter:url(#filter53)"
+             id="path53"
+             d="m 102.63922,103.98215 -1.56484,-1.49696 -2.080296,0.60166 1.496966,-1.56483 -0.60167,-2.080296 1.56484,1.496966 2.08029,-0.60167 -1.49696,1.56484 z"
+             transform="matrix(0.16736009,0.10214245,-0.10683256,0.17504482,120.75048,75.448206)" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -54,6 +54,12 @@ function PricesPage() {
           <strong>Throne, Wise, Zen, PayPal</strong>
         </p>
       </div>
+      <div className="tts-message">
+        <h3>Terms of service</h3>
+        <p>
+          <strong>TTS TEXT</strong>
+        </p>
+      </div>
     </div>
   );
 }

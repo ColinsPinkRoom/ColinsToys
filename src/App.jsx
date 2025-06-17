@@ -15,7 +15,12 @@ function App() {
   return (
     <div id="App">
       <Link to="">
-        <h2 id="mainTitle">Colins Pink Room</h2>
+        <div className="logo-container">
+          <img
+            src={`${import.meta.env.BASE_URL}/logos/Logo-website.svg`}
+            alt="Twitter"
+          />
+        </div>
       </Link>
 
       <Navigation />
