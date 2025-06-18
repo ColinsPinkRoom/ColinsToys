@@ -2,76 +2,121 @@ import React, { useEffect, useState } from "react";
 import "../../style/Home.css";
 
 function HomePage() {
-  const [featuredToy, setFeaturedToy] = useState(null);
+  const [featuredToys, setFeaturedToys] = useState([]);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [slideRight, setSlideRight] = useState(false);
+  const [slideLeft, setSlideLeft] = useState(false);
 
   useEffect(() => {
     fetch(import.meta.env.BASE_URL + "data/products.json")
       .then((res) => res.json())
       .then((data) => {
-        // Flatten all category arrays into one array
         const allItems = Object.values(data).flat();
         const featuredItems = allItems.filter((item) => item.featured);
-        setFeaturedToy(featuredItems[0]);
+        setFeaturedToys(featuredItems.slice(0, 5));
       })
       .catch((err) => {
-        console.error("❌ Failed to load featured toy:", err);
+        console.error("❌ Failed to load featured toys:", err);
       });
   }, []);
 
+  const handlePrev = () => {
+    setSlideRight(false);
+    setSlideLeft(false);
+    setTimeout(() => {
+      setCurrentSlide((prev) =>
+        prev === 0 ? featuredToys.length - 1 : prev - 1
+      );
+      setSlideLeft(true);
+    }, 10);
+  };
+
+  const handleNext = () => {
+    setSlideRight(false);
+    setSlideLeft(false);
+    setTimeout(() => {
+      setCurrentSlide((prev) =>
+        prev === featuredToys.length - 1 ? 0 : prev + 1
+      );
+      setSlideRight(true);
+    }, 10);
+  };
+
   return (
     <div className="home-container">
-      <h2 id="homeTitle">Welcome to Colin's Pink Room 💕</h2>
-      <hr className="hr-underline" />
+      {/* 1. Hero Section */}
+      <section className="hero-section">
+        <h2 id="homeTitle">Welcome to Colin's Pink Room 💕</h2>
+        <hr className="hr-underline" />
+        <p className="intro-text">
+          Hi sweetie! 💖 This is my little space to share what I love — cute
+          toys, custom content, and personal connections. Have a look around and
+          see what makes your heart flutter.
+        </p>
+        <div className="home-buttons">
+          <a href="#/products" className="home-btn">
+            🎀 Explore Toys
+          </a>
+          <a href="#/prices" className="home-btn">
+            💰 See Prices
+          </a>
+          <a href="#/socials" className="home-btn">
+            📸 Follow Me
+          </a>
+          <a href="#/contact" className="home-btn">
+            💌 Contact Me
+          </a>
+        </div>
+      </section>
 
-      <p className="intro-text">
-        Hi sweetie! 💖 This is my little space to share what I love — cute toys,
-        custom content, and personal connections. Have a look around and see
-        what makes your heart flutter.
-      </p>
+      {/* 2. Profile Picture */}
+      <section className="profile-highlight">
+        <img
+          src={`${import.meta.env.BASE_URL}/images/home-image.jpg`}
+          width={300}
+          alt="Colin"
+          className="selfie-image"
+          loading="lazy"
+        />
+      </section>
 
-      <div className="home-buttons">
-        <a href="#/products" className="home-btn">
-          🎀 Explore Toys
-        </a>
-        <a href="#/prices" className="home-btn">
-          💰 See Prices
-        </a>
-        <a href="#/socials" className="home-btn">
-          📸 Follow Me
-        </a>
-        <a href="#/contact" className="home-btn">
-          💌 Contact Me
-        </a>
-      </div>
-
-      {featuredToy ? (
-        <div className="featured-toy-card">
-          <img
-            src={featuredToy.img}
-            alt={featuredToy.name}
-            className="featured-img"
-          />
-          <div className="featured-details">
-            <h3>{featuredToy.name}</h3>
-            <p>{featuredToy.description}</p>
-            <p className="featured-price">{featuredToy.price}</p>
-            <a
-              href={featuredToy.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="featured-btn"
+      {/* 3. Featured Toys Slideshow */}
+      <section className="featured-section">
+        <h3 className="section-title">✨ Featured Toys ✨</h3>
+        {featuredToys.length > 0 ? (
+          <div className="slideshow-container">
+            <button className="slide-btn" onClick={handlePrev}>
+              ◀
+            </button>
+            <div
+              className={`featured-toy-card ${
+                slideRight ? "slide-right" : ""
+              } ${slideLeft ? "slide-left" : ""}`}
             >
-              View Toy
-            </a>
+              <img
+                src={featuredToys[currentSlide].img}
+                alt={featuredToys[currentSlide].name}
+                className="featured-img"
+                loading="lazy"
+              />
+              <div className="featured-details">
+                <h3>{featuredToys[currentSlide].name}</h3>
+                <p>{featuredToys[currentSlide].description}</p>
+              </div>
+            </div>
+            <button className="slide-btn" onClick={handleNext}>
+              ▶
+            </button>
           </div>
-        </div>
-      ) : (
-        <div id="loadingMessage" className="featured-toy-loading">
-          Loading featured toy...
-        </div>
-      )}
+        ) : (
+          <div className="featured-toy-loading">Loading featured toys...</div>
+        )}
+      </section>
 
-      <p className="soft-note">Made with love. Stay cute, stay curious. 🌸</p>
+      {/* 4. Footer Note */}
+      <footer className="soft-note">
+        Made with love. Stay cute, stay curious. 🌸
+      </footer>
     </div>
   );
 }
