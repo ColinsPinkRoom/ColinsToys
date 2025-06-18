@@ -1,33 +1,77 @@
-import React from "react";
-import { useEffect, useState } from "react";
-import "../../style/Home.css"; // Ensure you have a CSS file for styling
+import React, { useEffect, useState } from "react";
+import "../../style/Home.css";
 
 function HomePage() {
+  const [featuredToy, setFeaturedToy] = useState(null);
+
+  useEffect(() => {
+    fetch(import.meta.env.BASE_URL + "data/products.json")
+      .then((res) => res.json())
+      .then((data) => {
+        // Flatten all category arrays into one array
+        const allItems = Object.values(data).flat();
+        const featuredItems = allItems.filter((item) => item.featured);
+        setFeaturedToy(featuredItems[0]);
+      })
+      .catch((err) => {
+        console.error("❌ Failed to load featured toy:", err);
+      });
+  }, []);
+
   return (
     <div className="home-container">
-      <h2 id="homeTitle">Welcome to Colins Pink Room!</h2>
+      <h2 id="homeTitle">Welcome to Colin's Pink Room 💕</h2>
       <hr className="hr-underline" />
-      <p>
-        This is a curated list of toys and products that I think Colin would
-        enjoy. The list is updated regularly, so check back often for new
-        additions. If you have any suggestions or want to add something, feel
-        free to let me know!
+
+      <p className="intro-text">
+        Hi sweetie! 💖 This is my little space to share what I love — cute toys,
+        custom content, and personal connections. Have a look around and see
+        what makes your heart flutter.
       </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-        officiis aperiam dignissimos obcaecati est ullam, dolor eos explicabo
-        maxime quisquam iste, ab magni eaque delectus eveniet repellendus quod
-        inventore quae! Lorem ipsum dolor sit, amet consectetur adipisicing
-        elit. Ab sapiente nemo ex facilis quisquam non quidem aliquam
-        dignissimos repudiandae, tempora eveniet assumenda officiis illum. Eaque
-        iure sit quam quibusdam alias! lorem
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde maxime
-        commodi doloribus accusantium porro vero voluptate corrupti cumque,
-        nostrum, saepe ullam quo velit fugiat mollitia quae numquam soluta dicta
-        exercitationem?
-      </p>
+
+      <div className="home-buttons">
+        <a href="#/products" className="home-btn">
+          🎀 Explore Toys
+        </a>
+        <a href="#/prices" className="home-btn">
+          💰 See Prices
+        </a>
+        <a href="#/socials" className="home-btn">
+          📸 Follow Me
+        </a>
+        <a href="#/contact" className="home-btn">
+          💌 Contact Me
+        </a>
+      </div>
+
+      {featuredToy ? (
+        <div className="featured-toy-card">
+          <img
+            src={featuredToy.img}
+            alt={featuredToy.name}
+            className="featured-img"
+          />
+          <div className="featured-details">
+            <h3>{featuredToy.name}</h3>
+            <p>{featuredToy.description}</p>
+            <p className="featured-price">{featuredToy.price}</p>
+            <a
+              href={featuredToy.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="featured-btn"
+            >
+              View Toy
+            </a>
+          </div>
+        </div>
+      ) : (
+        <div id="loadingMessage" className="featured-toy-loading">
+          Loading featured toy...
+        </div>
+      )}
+
+      <p className="soft-note">Made with love. Stay cute, stay curious. 🌸</p>
     </div>
   );
 }

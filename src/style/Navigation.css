@@ -45,6 +45,14 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+.nav-button.active,
+.drawer-link.active {
+  background-color: rgba(255, 235, 245, 0.5);
+  box-shadow: 0 0 8px rgba(255, 150, 200, 0.6);
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
 /* Hamburger button */
 .hamburger {
   width: 70px;

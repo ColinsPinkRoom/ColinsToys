@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../style/Navigation.css";
 
 export default function Navigation() {
@@ -8,34 +8,40 @@ export default function Navigation() {
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false);
 
+  const navClass = ({ isActive }) =>
+    isActive ? "nav-button active" : "nav-button";
+
+  const drawerClass = ({ isActive }) =>
+    isActive ? "drawer-link active" : "drawer-link";
+
   return (
     <>
       {/* Hamburger (mobile only) */}
       <button className="hamburger" onClick={toggleMenu}>
         ☰
       </button>
-      <nav className="nav-bar">
-        {/* Desktop nav (hidden on mobile) */}
-        <div className="nav-links">
-          <Link className="nav-button" to="">
-            Home
-          </Link>
-          <Link className="nav-button" to="/products">
-            Toys
-          </Link>
-          <Link className="nav-button" to="/streaming">
-            Streaming
-          </Link>
-          <Link className="nav-button" to="/prices">
-            Prices
-          </Link>
 
-          <Link className="nav-button" to="/socials">
+      <nav className="nav-bar">
+        {/* Desktop nav */}
+        <div className="nav-links">
+          <NavLink className={navClass} to="">
+            Home
+          </NavLink>
+          <NavLink className={navClass} to="/products">
+            Toys
+          </NavLink>
+          <NavLink className={navClass} to="/streaming">
+            Streaming
+          </NavLink>
+          <NavLink className={navClass} to="/prices">
+            Prices
+          </NavLink>
+          <NavLink className={navClass} to="/socials">
             Socials
-          </Link>
-          <Link className="nav-button" to="/contact">
+          </NavLink>
+          <NavLink className={navClass} to="/contact">
             Contact
-          </Link>
+          </NavLink>
         </div>
       </nav>
 
@@ -44,24 +50,24 @@ export default function Navigation() {
         <button className="close-button" onClick={closeMenu}>
           ✕
         </button>
-        <Link className="drawer-link" to="" onClick={closeMenu}>
+        <NavLink className={drawerClass} to="" onClick={closeMenu}>
           Home
-        </Link>
-        <Link className="drawer-link" to="/products" onClick={closeMenu}>
+        </NavLink>
+        <NavLink className={drawerClass} to="/products" onClick={closeMenu}>
           Toys
-        </Link>
-        <Link className="drawer-link" to="/streaming" onClick={closeMenu}>
+        </NavLink>
+        <NavLink className={drawerClass} to="/streaming" onClick={closeMenu}>
           Streaming
-        </Link>
-        <Link className="drawer-link" to="/contact" onClick={closeMenu}>
+        </NavLink>
+        <NavLink className={drawerClass} to="/contact" onClick={closeMenu}>
           Contact
-        </Link>
-        <Link className="drawer-link" to="/socials" onClick={closeMenu}>
+        </NavLink>
+        <NavLink className={drawerClass} to="/socials" onClick={closeMenu}>
           Socials
-        </Link>
-        <Link className="drawer-link" to="/prices" onClick={closeMenu}>
+        </NavLink>
+        <NavLink className={drawerClass} to="/prices" onClick={closeMenu}>
           Prices
-        </Link>
+        </NavLink>
       </div>
 
       {/* Backdrop when drawer is open */}
