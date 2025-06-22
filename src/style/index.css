@@ -62,7 +62,11 @@ body::before {
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
+}
 
-  /* Optional outline for debugging */
-  /* outline: 3px solid lime; */
+/* --- Smallest Mobile styles --- */
+@media (max-width: 380px) {
+  #App {
+    padding: 0px;
+  }
 }
