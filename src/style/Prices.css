@@ -62,7 +62,7 @@
   color: #8b2e4e;
 }
 
-.payment-note {
+.prices-payment-note {
   font-size: 14px;
   color: #6e2f4f;
   margin-top: 16px;
@@ -74,7 +74,7 @@
   border: 1px solid #f1cbd7;
 }
 
-.tts-message {
+.prices-tts-message {
   font-size: 16px;
   margin-top: 16px;
   text-align: center;
@@ -85,7 +85,7 @@
   border: 1px solid #f1cbd7;
 }
 
-.prices-grid {
+.prices-grid-section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas:
@@ -98,7 +98,7 @@
 
 /* Mobile: stack everything */
 @media (max-width: 600px) {
-  .prices-grid {
+  .prices-grid-section {
     grid-template-columns: 1fr;
     grid-template-areas:
       "area0"

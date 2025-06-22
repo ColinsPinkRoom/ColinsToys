@@ -123,7 +123,7 @@ function HomePage() {
       </section>
 
       {/* 2. Profile Picture */}
-      <section className="profile-highlight">
+      <section className="profile-image-section">
         <img
           src={`${import.meta.env.BASE_URL}/images/home-image.jpg`}
           alt="Colin"
@@ -133,7 +133,7 @@ function HomePage() {
       </section>
 
       {/* 3. Featured Toys Slideshow */}
-      <section className="featured-section">
+      <section className="profile-featured-section">
         <h3 className="section-title">✨ Featured Toys ✨</h3>
         {featuredToys.length > 0 ? (
           <div className="slideshow-container">
@@ -189,7 +189,7 @@ function HomePage() {
       </section>
 
       {/* 4. Footer Note */}
-      <footer className="soft-note">
+      <footer className="profile-soft-note">
         Made with love. Stay cute, stay curious. 🌸
       </footer>
     </div>

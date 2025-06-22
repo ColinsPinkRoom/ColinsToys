@@ -12,6 +12,14 @@ h2 {
   text-align: center;
 }
 
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
 /* Loading Message */
 #loadingMessage {
   font-weight: bold;
@@ -131,7 +139,7 @@ hr {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.subcategory-menu-wrapper {
+.toys-subcategory-section {
   width: 100%;
   display: flex;
   justify-content: center;

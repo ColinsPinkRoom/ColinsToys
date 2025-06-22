@@ -53,8 +53,9 @@ function ToysPage() {
 
   return (
     <>
-      <div className="dildos-container">
-        <div className="category-layout">
+      <div className="toys-container">
+        {/* 1. Category Section */}
+        <section className="category-layout">
           <div className="category-menu">
             {categories.map((category) => (
               <button
@@ -71,12 +72,12 @@ function ToysPage() {
               </button>
             ))}
           </div>
+        </section>
+        <h4 className="category-title">{activeCategory}</h4>
 
-          <h4 className="category-title">{activeCategory}</h4>
-        </div>
-
+        {/* 2. Sub Category Section */}
         {subcategories.length > 0 && (
-          <div className="subcategory-menu-wrapper">
+          <section className="toys-subcategory-section">
             <div className="subcategory-menu">
               <button
                 className={`subcategory-tab ${
@@ -98,19 +99,20 @@ function ToysPage() {
                 </button>
               ))}
             </div>
-          </div>
+          </section>
         )}
 
-        <div className="dildosList opening scrollable">
+        {/* 3. Toys Section */}
+        <section className="toys-list-section">
           {sortedItems.map((item, index) => (
-            <div key={index} className="dildo-Item">
+            <div key={index} className="toys-item">
               <a href={item.link} target="_blank" rel="noreferrer">
                 <p>{item.price}</p>
                 <img src={item.img} width={100} height={100} alt={item.price} />
               </a>
             </div>
           ))}
-        </div>
+        </section>
       </div>
     </>
   );

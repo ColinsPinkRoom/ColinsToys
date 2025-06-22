@@ -4,7 +4,8 @@ import "../../style/Socials.css"; // Import your CSS file for styling
 function SocialsPage() {
   return (
     <div className="socials-container">
-      <div className="socials-link-container">
+      {/* 1. Links Section */}
+      <section className="socials-link-section">
         <h2 className="socials-title">Follow Me</h2>
         <div className="socials-links">
           <a
@@ -41,8 +42,10 @@ function SocialsPage() {
             XHamster
           </a>
         </div>
-      </div>
-      <div className="socials-image-container">
+      </section>
+
+      {/* 2. Profile Picture */}
+      <section className="socials-image-section">
         <img
           src={`${import.meta.env.BASE_URL}/images/socials-image.jpg`}
           width={300}
@@ -50,7 +53,7 @@ function SocialsPage() {
           className="socials-image"
           loading="lazy"
         />
-      </div>
+      </section>
     </div>
   );
 }

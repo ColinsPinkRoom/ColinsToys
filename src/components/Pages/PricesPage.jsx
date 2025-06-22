@@ -30,7 +30,9 @@ function PricesPage() {
   return (
     <div className="prices-container">
       <h2 className="prices-title">Prices</h2>
-      <div className="prices-grid">
+
+      {/* 1. Grid Section */}
+      <section className="prices-grid-section">
         {Object.entries(products).map(([category, items], index) => (
           <div
             className={`prices-category grid-area-${index}`}
@@ -46,15 +48,18 @@ function PricesPage() {
             ))}
           </div>
         ))}
-      </div>
+      </section>
 
-      <div className="payment-note">
+      {/* 2. Payment Note Section */}
+      <div className="prices-payment-note">
         <h3>Payment method</h3>
         <p>
           <strong>Throne, Wise, Zen, PayPal</strong>
         </p>
       </div>
-      <div className="tts-message">
+
+      {/* 3. TTS Section */}
+      <div className="prices-tts-message">
         <h3>Terms of service</h3>
         <p>
           <strong>TTS TEXT</strong>

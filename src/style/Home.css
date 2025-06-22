@@ -36,7 +36,7 @@
   line-height: 1.6;
 }
 
-.soft-note {
+.profile-soft-note {
   font-style: italic;
   font-size: 0.95rem;
   text-align: center;
@@ -68,12 +68,12 @@
   background-color: #ffaad2;
   box-shadow: 0 0 10px rgba(255, 180, 220, 0.6);
 }
-.profile-highlight {
+.profile-image-section {
   margin-top: 20px;
 }
 
 /* Featured Section */
-.featured-section {
+.profile-featured-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -142,19 +142,8 @@
   touch-action: pan-y;
 
   will-change: transform;
-  cursor: grab;
+
   transition: transform 0.3s ease;
-}
-
-/* Swipe animation class */
-.featured-toy-card.swiping {
-  transition: none;
-  cursor: grabbing;
-}
-
-/* This class gets updated dynamically via React */
-.featured-toy-card.dragging {
-  cursor: grabbing;
 }
 
 /* Optional visual improvement on non-drag state */

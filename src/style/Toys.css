@@ -1,6 +1,6 @@
 /* DILDOS CONTAINER & LIST */
 
-.dildos-container {
+.toys-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,7 +34,7 @@
   padding-bottom: 10px;
 }
 
-.dildosList {
+.toys-list-section {
   margin: 0px;
   padding: 0;
   width: 100%;
@@ -52,7 +52,7 @@
 }
 
 /* SINGLE ITEM */
-.dildo-Item {
+.toys-item {
   flex: 0 1 120px;
   display: flex;
   flex-direction: column;
@@ -64,7 +64,7 @@
   overflow: hidden;
 }
 
-.dildo-Item img {
+.toys-item img {
   width: 100px;
   height: 100px;
   object-fit: cover;
@@ -74,7 +74,7 @@
   border-radius: 4px;
 }
 
-.dildo-Item p {
+.toys-item p {
   margin: 8px 0 12px;
   padding: 0 8px;
   font-size: 14px;
@@ -82,7 +82,7 @@
   text-align: center;
 }
 
-.dildo-Item p {
+.toys-item p {
   margin: 8px 0;
   padding: 6px 10px;
   font-size: 1rem;
@@ -96,12 +96,12 @@
   backdrop-filter: blur(2px);
 }
 
-.dildo-Item:hover {
+.toys-item:hover {
   transform: translateY(-4px) scale(1.05);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.dildo-Item a {
+.toys-item a {
   color: #2980b9;
   text-decoration: none;
   display: flex;
@@ -111,7 +111,7 @@
   height: 100%;
 }
 
-.dildo-Item a:hover {
+.toys-item a:hover {
   color: #1c5980;
 }
 
