@@ -203,3 +203,17 @@ hr {
     margin-top: 20px;
   }
 }
+
+/* --- Smallest Mobile styles --- */
+@media (max-width: 380px) {
+  .logo-container {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .logo-container img {
+    max-width: 300px;
+  }
+}

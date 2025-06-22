@@ -7,6 +7,14 @@ function HomePage() {
   const [slideRight, setSlideRight] = useState(false);
   const [slideLeft, setSlideLeft] = useState(false);
 
+  // Touch tracking for swipe
+  const [touchStartX, setTouchStartX] = useState(null);
+  const [touchEndX, setTouchEndX] = useState(null);
+
+  const [dragStartX, setDragStartX] = useState(null);
+  const [dragOffsetX, setDragOffsetX] = useState(0);
+  const swipeThreshold = 50;
+
   useEffect(() => {
     fetch(import.meta.env.BASE_URL + "data/products.json")
       .then((res) => res.json())
@@ -42,6 +50,51 @@ function HomePage() {
     }, 10);
   };
 
+  const handlePointerDown = (e) => {
+    setDragStartX(e.clientX || e.touches?.[0].clientX);
+  };
+
+  // Touch gesture handlers
+  const handlePointerMove = (e) => {
+    if (dragStartX !== null) {
+      const currentX = e.clientX || e.touches?.[0].clientX;
+      setDragOffsetX(currentX - dragStartX);
+    }
+  };
+
+  const handlePointerUp = () => {
+    if (dragOffsetX > swipeThreshold) {
+      handlePrev();
+    } else if (dragOffsetX < -swipeThreshold) {
+      handleNext();
+    }
+    setDragStartX(null);
+    setDragOffsetX(0);
+  };
+
+  const handleTouchStart = (e) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEndX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX || !touchEndX) return;
+
+    const distance = touchStartX - touchEndX;
+
+    if (distance > 50) {
+      handleNext(); // Swipe left
+    } else if (distance < -50) {
+      handlePrev(); // Swipe right
+    }
+
+    setTouchStartX(null);
+    setTouchEndX(null);
+  };
+
   return (
     <div className="home-container">
       {/* 1. Hero Section */}
@@ -73,7 +126,6 @@ function HomePage() {
       <section className="profile-highlight">
         <img
           src={`${import.meta.env.BASE_URL}/images/home-image.jpg`}
-          width={300}
           alt="Colin"
           className="selfie-image"
           loading="lazy"
@@ -85,13 +137,27 @@ function HomePage() {
         <h3 className="section-title">✨ Featured Toys ✨</h3>
         {featuredToys.length > 0 ? (
           <div className="slideshow-container">
-            <button className="slide-btn" onClick={handlePrev}>
+            <button className="slide-btn prev" onClick={handlePrev}>
               ◀
             </button>
+
             <div
               className={`featured-toy-card ${
                 slideRight ? "slide-right" : ""
-              } ${slideLeft ? "slide-left" : ""}`}
+              } ${slideLeft ? "slide-left" : ""} ${
+                dragStartX !== null ? "swiping dragging" : ""
+              }`}
+              style={{
+                transform: `translateX(${dragOffsetX}px)`,
+                opacity: 1 - Math.min(Math.abs(dragOffsetX) / 150, 0.6),
+              }}
+              onPointerDown={handlePointerDown}
+              onPointerMove={handlePointerMove}
+              onPointerUp={handlePointerUp}
+              onPointerLeave={handlePointerUp}
+              onTouchStart={handlePointerDown}
+              onTouchMove={handlePointerMove}
+              onTouchEnd={handlePointerUp}
             >
               <img
                 src={featuredToys[currentSlide].img}
@@ -104,13 +170,22 @@ function HomePage() {
                 <p>{featuredToys[currentSlide].description}</p>
               </div>
             </div>
-            <button className="slide-btn" onClick={handleNext}>
+
+            <button className="slide-btn next" onClick={handleNext}>
               ▶
             </button>
           </div>
         ) : (
           <div className="featured-toy-loading">Loading featured toys...</div>
         )}
+        <div className="carousel-dots">
+          {featuredToys.map((_, index) => (
+            <span
+              key={index}
+              className={`dot ${index === currentSlide ? "active" : ""}`}
+            ></span>
+          ))}
+        </div>
       </section>
 
       {/* 4. Footer Note */}

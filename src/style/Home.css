@@ -88,12 +88,17 @@
 }
 
 /* Slideshow Controls */
+
 .slideshow-container {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 20px;
+  justify-content: center;
+  width: 100%;
 }
 
+/* Position slide buttons on sides of the slideshow card */
 .slide-btn {
   background: #ffc2e0;
   border: none;
@@ -105,13 +110,24 @@
   cursor: pointer;
   transition: background 0.2s ease;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
 }
 
 .slide-btn:hover {
   background: #ffaad2;
 }
 
-/* Featured Toy Card */
+.slide-btn.prev {
+  left: -50px;
+}
+
+.slide-btn.next {
+  right: -50px;
+}
+
 .featured-toy-card {
   display: flex;
   flex-direction: column;
@@ -123,6 +139,27 @@
   box-shadow: 0 0 12px rgba(255, 150, 200, 0.25);
   text-align: center;
   user-select: none;
+  touch-action: pan-y;
+
+  will-change: transform;
+  cursor: grab;
+  transition: transform 0.3s ease;
+}
+
+/* Swipe animation class */
+.featured-toy-card.swiping {
+  transition: none;
+  cursor: grabbing;
+}
+
+/* This class gets updated dynamically via React */
+.featured-toy-card.dragging {
+  cursor: grabbing;
+}
+
+/* Optional visual improvement on non-drag state */
+.featured-toy-card:not(.swiping) {
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .featured-img {
@@ -142,6 +179,28 @@
 .featured-details p {
   margin: 4px 0;
   color: #5b2b44;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ffc2e0;
+  border-radius: 50%;
+  transition: background-color 0.3s, transform 0.3s;
+  opacity: 0.5;
+}
+
+.dot.active {
+  background-color: #d14c8b;
+  opacity: 1;
+  transform: scale(1.2);
 }
 
 /* Animations */
@@ -184,4 +243,11 @@
 
 .slide-right {
   animation: slideInRight 0.4s ease-in-out;
+}
+
+/* Hide buttons on small screens (mobile) */
+@media (max-width: 600px) {
+  .slide-btn {
+    display: none;
+  }
 }
