@@ -98,34 +98,36 @@
   width: 100%;
 }
 
-/* Position slide buttons on sides of the slideshow card */
 .slide-btn {
-  background: #ffc2e0;
-  border: none;
-  border-radius: 50%;
   width: 36px;
   height: 36px;
-  font-size: 18px;
-  color: #6b2b4c;
-  cursor: pointer;
-  transition: background 0.2s ease;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
   z-index: 2;
 }
 
-.slide-btn:hover {
-  background: #ffaad2;
-}
-
+/* Flip prev button */
 .slide-btn.prev {
   left: -50px;
+  transform: translateY(-50%) scaleX(-1);
 }
 
+/* Keep next as-is */
 .slide-btn.next {
   right: -50px;
+}
+
+/* Hover: grow NEXT button */
+.slide-btn.next:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Hover: grow PREV button, while keeping the horizontal flip */
+.slide-btn.prev:hover {
+  transform: translateY(-50%) scaleX(-1) scale(1.1);
 }
 
 .featured-toy-card {

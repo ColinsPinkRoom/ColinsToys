@@ -137,9 +137,12 @@ function HomePage() {
         <h3 className="section-title">✨ Featured Toys ✨</h3>
         {featuredToys.length > 0 ? (
           <div className="slideshow-container">
-            <button className="slide-btn prev" onClick={handlePrev}>
-              ◀
-            </button>
+            <img
+              src={`${import.meta.env.BASE_URL}/icons/next-button.svg`}
+              alt="Twitter"
+              onClick={handlePrev}
+              className="slide-btn prev"
+            />
 
             <div
               className={`featured-toy-card ${
@@ -171,9 +174,12 @@ function HomePage() {
               </div>
             </div>
 
-            <button className="slide-btn next" onClick={handleNext}>
-              ▶
-            </button>
+            <img
+              src={`${import.meta.env.BASE_URL}/icons/next-button.svg`}
+              alt="Twitter"
+              onClick={handleNext}
+              className="slide-btn next"
+            />
           </div>
         ) : (
           <div className="featured-toy-loading">Loading featured toys...</div>
