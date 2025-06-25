@@ -1,0 +1,21 @@
+.not-found-container {
+  text-align: center;
+  padding: 40px;
+  font-family: "Segoe UI", sans-serif;
+  color: #8b3a62;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 700px;
+  width: 100%;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 230, 245, 0.95),
+    rgba(255, 210, 235, 0.9)
+  );
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 180, 220, 0.5);
+}
