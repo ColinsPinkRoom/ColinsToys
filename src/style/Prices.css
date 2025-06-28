@@ -1,22 +1,25 @@
+/* ===== Container & Layout ===== */
 .prices-container {
   display: flex;
-  justify-content: space-around;
   flex-direction: column;
   flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
   padding: 20px;
-  max-width: 700px;
   width: 100%;
+  max-width: 700px;
+
   background: linear-gradient(
     145deg,
     rgba(255, 230, 245, 0.95),
     rgba(255, 210, 235, 0.9)
   );
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 50%);
   border: 1px solid rgba(255, 180, 220, 0.5);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
+/* ===== Titles ===== */
 .prices-title {
   text-align: center;
   font-size: 32px;
@@ -24,12 +27,14 @@
   margin-bottom: 30px;
 }
 
+/* ===== Links Section ===== */
 .prices-links {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
 
+/* ===== Price Category Box ===== */
 .prices-category {
   background-color: #fff8fb;
   padding: 16px;
@@ -37,14 +42,16 @@
   border: 1px solid #f1cbd7;
 }
 
+/* Category Title Styling */
 .category-title {
   font-size: 24px;
   color: #a93a6c;
   margin-bottom: 16px;
-  border-bottom: 1px dashed #e7aac5;
   padding-bottom: 4px;
+  border-bottom: 1px dashed #e7aac5;
 }
 
+/* ===== Price Rows ===== */
 .prices-box {
   display: flex;
   justify-content: space-between;
@@ -53,6 +60,7 @@
   border-bottom: 1px solid #f1d2e2;
 }
 
+/* Item Name & Price */
 .item-name {
   color: #6e2f4f;
 }
@@ -62,12 +70,14 @@
   color: #8b2e4e;
 }
 
-.prices-payment-note {
+/* ===== Notes & Messages ===== */
+.prices-payment-note,
+.prices-tts-message {
   font-size: 14px;
-  color: #6e2f4f;
+  line-height: 1.5;
   margin-top: 16px;
   text-align: center;
-  line-height: 1.5;
+
   background-color: #fff8fb;
   padding: 16px;
   border-radius: 12px;
@@ -76,15 +86,9 @@
 
 .prices-tts-message {
   font-size: 16px;
-  margin-top: 16px;
-  text-align: center;
-  line-height: 1.5;
-  background-color: #fff8fb;
-  padding: 16px;
-  border-radius: 12px;
-  border: 1px solid #f1cbd7;
 }
 
+/* ===== Grid Layout for Price Sections ===== */
 .prices-grid-section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -96,7 +100,7 @@
   gap: 32px;
 }
 
-/* Mobile: stack everything */
+/* ===== Responsive Design ===== */
 @media (max-width: 600px) {
   .prices-grid-section {
     grid-template-columns: 1fr;
