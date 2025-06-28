@@ -1,30 +1,31 @@
-/* Container & Layout */
+/* ===== Container & Layout ===== */
 .home-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  max-width: 700px;
   width: 100%;
+  max-width: 700px;
+
   background: linear-gradient(
     145deg,
     rgba(255, 230, 245, 0.95),
     rgba(255, 210, 235, 0.9)
   );
+  border: 1px solid rgba(255, 180, 220, 0.5);
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 180, 220, 0.5);
 }
 
-/* Headings & Text */
+/* ===== Headings & Text ===== */
 #homeTitle {
+  font-family: "Georgia", serif;
   font-size: 2.2rem;
   font-weight: 700;
-  color: #ff71b2;
-  margin-bottom: 0.8rem;
-  font-family: "Georgia", serif;
   text-align: center;
+  color: #ff71b2;
   text-shadow: 1px 1px 4px rgba(255, 200, 230, 0.4);
+  margin-bottom: 0.8rem;
   padding-bottom: 0.4rem;
 }
 
@@ -32,24 +33,24 @@
   font-size: 1.1rem;
   text-align: center;
   color: #5a2d45;
-  margin-bottom: 20px;
   line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 .profile-soft-note {
   font-style: italic;
   font-size: 0.95rem;
   text-align: center;
-  margin-top: 20px;
   color: #8b2e4e;
+  margin-top: 20px;
 }
 
-/* Navigation Buttons */
+/* ===== Buttons ===== */
 .home-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
   justify-content: center;
+  gap: 16px;
   margin: 20px 0;
 }
 
@@ -60,19 +61,20 @@
   border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
 }
 
 .home-btn:hover {
   background-color: #ffaad2;
   box-shadow: 0 0 10px rgba(255, 180, 220, 0.6);
 }
+
+/* ===== Profile & Featured Section ===== */
 .profile-image-section {
   margin-top: 20px;
 }
 
-/* Featured Section */
 .profile-featured-section {
   display: flex;
   flex-direction: column;
@@ -82,73 +84,67 @@
 }
 
 .selfie-image {
+  max-width: 300px;
   border-radius: 16px;
   box-shadow: 0 0 12px rgba(255, 180, 220, 0.3);
-  max-width: 300px;
 }
 
-/* Slideshow Controls */
-
+/* ===== Slideshow ===== */
 .slideshow-container {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 20px;
   justify-content: center;
+  gap: 20px;
   width: 100%;
 }
 
 .slide-btn {
-  width: 36px;
-  height: 36px;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
   cursor: pointer;
-  transition: transform 0.2s ease, filter 0.2s ease;
   z-index: 2;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  transform: translateY(-50%);
 }
 
-/* Flip prev button */
 .slide-btn.prev {
   left: -50px;
   transform: translateY(-50%) scaleX(-1);
 }
 
-/* Keep next as-is */
 .slide-btn.next {
   right: -50px;
 }
 
-/* Hover: grow NEXT button */
 .slide-btn.next:hover {
   transform: translateY(-50%) scale(1.1);
 }
 
-/* Hover: grow PREV button, while keeping the horizontal flip */
 .slide-btn.prev:hover {
   transform: translateY(-50%) scaleX(-1) scale(1.1);
 }
 
+/* ===== Featured Toy Cards ===== */
 .featured-toy-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #fff0f7;
-  border-radius: 12px;
   max-width: 200px;
   padding: 16px;
-  box-shadow: 0 0 12px rgba(255, 150, 200, 0.25);
   text-align: center;
+
+  background: #fff0f7;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(255, 150, 200, 0.25);
   user-select: none;
   touch-action: pan-y;
-
   will-change: transform;
-
   transition: transform 0.3s ease;
 }
 
-/* Optional visual improvement on non-drag state */
 .featured-toy-card:not(.swiping) {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -156,8 +152,8 @@
 .featured-img {
   width: 180px;
   height: auto;
-  border-radius: 10px;
   margin-bottom: 12px;
+  border-radius: 10px;
   object-fit: cover;
 }
 
@@ -168,10 +164,11 @@
 }
 
 .featured-details p {
-  margin: 4px 0;
   color: #5b2b44;
+  margin: 4px 0;
 }
 
+/* ===== Carousel Dots ===== */
 .carousel-dots {
   display: flex;
   justify-content: center;
@@ -182,19 +179,19 @@
 .dot {
   width: 10px;
   height: 10px;
-  background-color: #ffc2e0;
-  border-radius: 50%;
-  transition: background-color 0.3s, transform 0.3s;
   opacity: 0.5;
+  border-radius: 50%;
+  background-color: #ffc2e0;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .dot.active {
   background-color: #d14c8b;
-  opacity: 1;
   transform: scale(1.2);
+  opacity: 1;
 }
 
-/* Animations */
+/* ===== Animations ===== */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -236,7 +233,7 @@
   animation: slideInRight 0.4s ease-in-out;
 }
 
-/* Hide buttons on small screens (mobile) */
+/* ===== Responsive: Hide slideshow arrows on mobile ===== */
 @media (max-width: 600px) {
   .slide-btn {
     display: none;
