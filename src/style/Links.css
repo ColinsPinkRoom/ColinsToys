@@ -46,16 +46,12 @@
   grid-template-columns: 1fr;
   gap: 32px;
   padding: 0 12px;
-}
 
-@media (min-width: 768px) {
-  .links-grid {
-    grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 
-    grid-template-areas:
-      "area0 area0 area1 area1"
-      ". area2 area2 .";
-  }
+  grid-template-areas:
+    "area0 area0 area1 area1"
+    ". area2 area2 .";
 }
 
 .link-card {
@@ -110,4 +106,17 @@
 .link-card a img {
   width: 24px;
   height: 24px;
+}
+
+@media (max-width: 768px) {
+  .links-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "area0"
+      "area1"
+      "area2";
+  }
+  .hero-image-wrapper {
+    display: none;
+  }
 }
