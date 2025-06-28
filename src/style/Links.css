@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap");
+
+.links-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px;
+  max-width: 700px;
+  width: 100%;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 230, 245, 0.95),
+    rgba(255, 210, 235, 0.9)
+  );
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 50%);
+  border: 1px solid rgba(255, 180, 220, 0.5);
+}
+
+.hero-image-wrapper {
+  width: 100%;
+
+  height: 200px;
+  margin-bottom: 32px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgb(255, 160, 210);
+}
+
+.links-section {
+  width: 100%;
+  max-width: 960px;
+}
+
+.links-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  padding: 0 12px;
+}
+
+@media (min-width: 768px) {
+  .links-grid {
+    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-areas:
+      "area0 area0 area1 area1"
+      ". area2 area2 .";
+  }
+}
+
+.link-card {
+  background: #fff4f9;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(255, 160, 210, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.link-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(255, 120, 180, 0.3);
+}
+
+.link-title {
+  font-family: "Lily Script One", cursive;
+  font-size: 24px;
+  color: #d4427c;
+  margin-bottom: 16px;
+  text-align: center;
+  text-shadow: 0 1px 1px #fff0f8;
+}
+
+.link-card a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #8c2e54;
+  background: linear-gradient(145deg, #ffe3ef, #ffd5ec);
+  padding: 10px 16px;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 240px;
+  border-radius: 14px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: inset 0 1px 0 #fff, 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.link-card a:hover {
+  background: linear-gradient(145deg, #ffd5ec, #ffc4e2);
+  transform: scale(1.04);
+}
+
+.link-card a img {
+  width: 24px;
+  height: 24px;
+}
