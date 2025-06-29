@@ -1,0 +1,152 @@
+/* ===== Slideshow ===== */
+.slideshow-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  z-index: 2;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  transform: translateY(-50%);
+}
+
+.slide-btn.prev {
+  left: -50px;
+  transform: translateY(-50%) scaleX(-1);
+}
+
+.slide-btn.next {
+  right: -50px;
+}
+
+.slide-btn.next:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.slide-btn.prev:hover {
+  transform: translateY(-50%) scaleX(-1) scale(1.1);
+}
+
+/* ===== Featured Toy Cards ===== */
+.slideshow-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 200px;
+  min-height: 300px;
+  padding: 16px;
+  text-align: center;
+
+  background: #fff0f7;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(255, 150, 200, 0.25);
+  user-select: none;
+  touch-action: pan-y;
+  will-change: transform;
+  transition: transform 0.3s ease;
+}
+
+.slideshow-card:not(.swiping) {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.slideshow-img {
+  width: 180px;
+  height: auto;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.slideshow-details h3 {
+  font-size: 1.2rem;
+  color: #d14c8b;
+  margin-bottom: 6px;
+}
+
+.slideshow-details p {
+  color: #5b2b44;
+  margin: 4px 0;
+}
+
+/* ===== Carousel Dots ===== */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  opacity: 0.5;
+  border-radius: 50%;
+  background-color: #ffc2e0;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.dot.active {
+  background-color: #d14c8b;
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-left {
+  animation: slideInLeft 0.4s ease-in-out;
+}
+
+.slide-right {
+  animation: slideInRight 0.4s ease-in-out;
+}
+
+/* ===== Responsive: Hide slideshow arrows on mobile ===== */
+@media (max-width: 600px) {
+  .slide-btn {
+    display: none;
+  }
+}

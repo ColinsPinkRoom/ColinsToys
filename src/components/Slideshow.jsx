@@ -1,6 +1,5 @@
-// components/FeaturedSlideshow.jsx
-import React, { useState } from "react";
-// import "../style/FeaturedSlideshow.css";
+import React, { useState, useEffect } from "react";
+import "../style/Slideshow.css";
 
 function SlideShow({ items = [] }) {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -10,7 +9,15 @@ function SlideShow({ items = [] }) {
   const [dragOffsetX, setDragOffsetX] = useState(0);
   const swipeThreshold = 50;
 
+  useEffect(() => {
+    // Reset slide index if items change and currentSlide is out of bounds
+    if (currentSlide >= items.length) {
+      setCurrentSlide(0);
+    }
+  }, [items, currentSlide]);
+
   const handlePrev = () => {
+    if (items.length === 0) return;
     setSlideRight(false);
     setSlideLeft(false);
     setTimeout(() => {
@@ -20,6 +27,7 @@ function SlideShow({ items = [] }) {
   };
 
   const handleNext = () => {
+    if (items.length === 0) return;
     setSlideRight(false);
     setSlideLeft(false);
     setTimeout(() => {
@@ -47,58 +55,63 @@ function SlideShow({ items = [] }) {
     setDragOffsetX(0);
   };
 
-  if (!items.length) {
-    return (
-      <div className="featured-toy-loading">Loading featured items...</div>
-    );
+  // Defensive check
+  if (!Array.isArray(items) || items.length === 0) {
+    return <div className="featured-toy-loading">No items to show.</div>;
+  }
+
+  const current = items[currentSlide];
+  if (!current || !current.img) {
+    return <div className="featured-toy-loading">Invalid slide data.</div>;
   }
 
   return (
-    <section className="profile-featured-section">
-      <h3 className="section-title">✨ Featured Items ✨</h3>
-      <div className="slideshow-container">
-        <img
-          src={`${import.meta.env.BASE_URL}/icons/next-button.svg`}
-          alt="Previous"
-          onClick={handlePrev}
-          className="slide-btn prev"
-        />
+    <div className="slideshow-container">
+      <img
+        src={`${import.meta.env.BASE_URL}/icons/next-button.svg`}
+        alt="Previous"
+        onClick={handlePrev}
+        className="slide-btn prev"
+        loading="lazy"
+      />
 
-        <div
-          className={`featured-toy-card ${slideRight ? "slide-right" : ""} ${
-            slideLeft ? "slide-left" : ""
-          } ${dragStartX !== null ? "swiping dragging" : ""}`}
-          style={{
-            transform: `translateX(${dragOffsetX}px)`,
-            opacity: 1 - Math.min(Math.abs(dragOffsetX) / 150, 0.6),
-          }}
-          onPointerDown={handlePointerDown}
-          onPointerMove={handlePointerMove}
-          onPointerUp={handlePointerUp}
-          onPointerLeave={handlePointerUp}
-          onTouchStart={handlePointerDown}
-          onTouchMove={handlePointerMove}
-          onTouchEnd={handlePointerUp}
-        >
-          <img
-            src={items[currentSlide].img}
-            alt={items[currentSlide].name}
-            className="featured-img"
-            loading="lazy"
-          />
-          <div className="featured-details">
-            <h3>{items[currentSlide].name}</h3>
-            <p>{items[currentSlide].description}</p>
+      <div
+        className={`slideshow-card ${slideRight ? "slide-right" : ""} ${
+          slideLeft ? "slide-left" : ""
+        } ${dragStartX !== null ? "swiping dragging" : ""}`}
+        style={{
+          transform: `translateX(${dragOffsetX}px)`,
+          opacity: 1 - Math.min(Math.abs(dragOffsetX) / 150, 0.6),
+        }}
+        onPointerDown={handlePointerDown}
+        onPointerMove={handlePointerMove}
+        onPointerUp={handlePointerUp}
+        onPointerLeave={handlePointerUp}
+        onTouchStart={handlePointerDown}
+        onTouchMove={handlePointerMove}
+        onTouchEnd={handlePointerUp}
+      >
+        <img
+          src={current.img}
+          alt={current.name || "Gallery image"}
+          className="slideshow-img"
+          loading="lazy"
+        />
+        {(current.name || current.description) && (
+          <div className="slideshow-details">
+            {current.name && <h3>{current.name}</h3>}
+            {current.description && <p>{current.description}</p>}
           </div>
-        </div>
-
-        <img
-          src={`${import.meta.env.BASE_URL}/icons/next-button.svg`}
-          alt="Next"
-          onClick={handleNext}
-          className="slide-btn next"
-        />
+        )}
       </div>
+
+      <img
+        src={`${import.meta.env.BASE_URL}/icons/next-button.svg`}
+        alt="Next"
+        onClick={handleNext}
+        className="slide-btn next"
+        loading="lazy"
+      />
 
       <div className="carousel-dots">
         {items.map((_, index) => (
@@ -108,7 +121,7 @@ function SlideShow({ items = [] }) {
           ></span>
         ))}
       </div>
-    </section>
+    </div>
   );
 }
 
