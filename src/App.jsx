@@ -9,6 +9,7 @@ import LinksPage from "./components/Pages/LinksPage.jsx";
 import SocialsPage from "./components/Pages/SocialsPage.jsx";
 import PricesPage from "./components/Pages/PricesPage.jsx";
 import NotFoundPage from "./components/Pages/NotFoundPage.jsx";
+import GalleryPage from "./components/Pages/GalleryPage.jsx";
 
 import "./style/App.css";
 
@@ -32,6 +33,7 @@ function App() {
         <Route path="/links" element={<LinksPage />} />
         <Route path="/socials" element={<SocialsPage />} />
         <Route path="/prices" element={<PricesPage />} />
+        <Route path="/gallery" element={<GalleryPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <footer id="footer">

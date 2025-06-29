@@ -30,6 +30,9 @@ export default function Navigation() {
           <NavLink className={navClass} to="/products">
             Toys
           </NavLink>
+          <NavLink className={navClass} to="/gallery">
+            Gallery
+          </NavLink>
           <NavLink className={navClass} to="/prices">
             Prices
           </NavLink>
@@ -55,6 +58,9 @@ export default function Navigation() {
         </NavLink>
         <NavLink className={drawerClass} to="/products" onClick={closeMenu}>
           Toys
+        </NavLink>
+        <NavLink className={navClass} to="/gallery" onClick={closeMenu}>
+          Gallery
         </NavLink>
         <NavLink className={drawerClass} to="/contact" onClick={closeMenu}>
           Contact

@@ -108,7 +108,13 @@ function ToysPage() {
             <div key={index} className="toys-item">
               <a href={item.link} target="_blank" rel="noreferrer">
                 <p>{item.price}</p>
-                <img src={item.img} width={100} height={100} alt={item.price} />
+                <img
+                  src={item.img}
+                  width={100}
+                  height={100}
+                  alt={item.price}
+                  loading="lazy"
+                />
               </a>
             </div>
           ))}

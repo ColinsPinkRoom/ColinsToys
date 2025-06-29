@@ -54,8 +54,10 @@ function HomePage() {
       </section>
 
       {/* 3. Featured Toys Slideshow */}
-      <Slideshow items={featuredToys} />
-
+      <section className="profile-featured-section">
+        <h3 className="section-title">✨ Featured Items ✨</h3>
+        <Slideshow items={featuredToys} />
+      </section>
       {/* 4. Footer Note */}
       <footer className="profile-soft-note">
         Made with love. Stay cute, stay curious. 🌸
