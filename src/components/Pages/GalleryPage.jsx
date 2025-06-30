@@ -63,7 +63,7 @@ function GalleryPage() {
         title={activeCategory}
       />
 
-      <SlideShow items={filteredItems} />
+      <SlideShow items={filteredItems} gallery={true} />
     </div>
   );
 }

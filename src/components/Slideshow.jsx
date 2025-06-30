@@ -12,7 +12,7 @@ const cld = new Cloudinary({
   },
 });
 
-function SlideShow({ items = [] }) {
+function SlideShow({ items = [], gallery }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [slideRight, setSlideRight] = useState(false);
   const [slideLeft, setSlideLeft] = useState(false);
@@ -118,19 +118,28 @@ function SlideShow({ items = [] }) {
         onTouchEnd={handlePointerUp}
       >
         <div className="image-wrapper" ref={imageRef}>
-          {!imageLoaded && (
+          {!imageLoaded && gallery && (
             <div className="image-loading">
               <div className="spinner"></div>
             </div>
           )}
-          <AdvancedImage
-            cldImg={cldImg}
-            className="slideshow-img"
-            style={{
-              opacity: imageLoaded ? 1 : 0,
-              transition: "opacity 0.4s ease-in-out",
-            }}
-          />
+          {gallery ? (
+            <AdvancedImage
+              cldImg={cldImg}
+              className="slideshow-img"
+              style={{
+                opacity: imageLoaded ? 1 : 0,
+                transition: "opacity 0.4s ease-in-out",
+              }}
+            />
+          ) : (
+            <img
+              src={current.img}
+              alt={current.name || "Gallery image"}
+              className="slideshow-img"
+              loading="lazy"
+            />
+          )}
         </div>
 
         {(current.name || current.description) && (
