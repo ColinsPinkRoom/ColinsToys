@@ -28,7 +28,11 @@ function GalleryPage() {
   }
 
   if (!galleryData || !activeCategory) {
-    return <div className="loading-message">Loading gallery...</div>;
+    return (
+      <div className="image-loading">
+        <div className="spinner"></div>
+      </div>
+    );
   }
 
   const categories = Object.keys(galleryData);
