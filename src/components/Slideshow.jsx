@@ -1,5 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../style/Slideshow.css";
+
+import { Cloudinary } from "@cloudinary/url-gen";
+import { AdvancedImage } from "@cloudinary/react";
+import { scale } from "@cloudinary/url-gen/actions/resize";
+import { format, quality } from "@cloudinary/url-gen/actions/delivery";
+
+const cld = new Cloudinary({
+  cloud: {
+    cloudName: "dqduer2pc", // ✅ Use your own Cloudinary cloud name
+  },
+});
 
 function SlideShow({ items = [] }) {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -7,14 +18,24 @@ function SlideShow({ items = [] }) {
   const [slideLeft, setSlideLeft] = useState(false);
   const [dragStartX, setDragStartX] = useState(null);
   const [dragOffsetX, setDragOffsetX] = useState(0);
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const imageRef = useRef(null);
+
   const swipeThreshold = 50;
 
   useEffect(() => {
-    // Reset slide index if items change and currentSlide is out of bounds
     if (currentSlide >= items.length) {
       setCurrentSlide(0);
     }
   }, [items, currentSlide]);
+
+  useEffect(() => {
+    setImageLoaded(false);
+    const imgEl = imageRef.current?.getElementsByTagName("img")[0];
+    if (imgEl) {
+      imgEl.onload = () => setImageLoaded(true);
+    }
+  }, [currentSlide]);
 
   const handlePrev = () => {
     if (items.length === 0) return;
@@ -55,7 +76,6 @@ function SlideShow({ items = [] }) {
     setDragOffsetX(0);
   };
 
-  // Defensive check
   if (!Array.isArray(items) || items.length === 0) {
     return <div className="featured-toy-loading">No items to show.</div>;
   }
@@ -64,6 +84,12 @@ function SlideShow({ items = [] }) {
   if (!current || !current.img) {
     return <div className="featured-toy-loading">Invalid slide data.</div>;
   }
+
+  const cldImg = cld.image(current.img);
+  cldImg
+    .resize(scale().width(900))
+    .delivery(format("auto"))
+    .delivery(quality("auto"));
 
   return (
     <div className="slideshow-container">
@@ -91,12 +117,22 @@ function SlideShow({ items = [] }) {
         onTouchMove={handlePointerMove}
         onTouchEnd={handlePointerUp}
       >
-        <img
-          src={current.img}
-          alt={current.name || "Gallery image"}
-          className="slideshow-img"
-          loading="lazy"
-        />
+        <div className="image-wrapper" ref={imageRef}>
+          {!imageLoaded && (
+            <div className="image-loading">
+              <div className="spinner"></div>
+            </div>
+          )}
+          <AdvancedImage
+            cldImg={cldImg}
+            className="slideshow-img"
+            style={{
+              opacity: imageLoaded ? 1 : 0,
+              transition: "opacity 0.4s ease-in-out",
+            }}
+          />
+        </div>
+
         {(current.name || current.description) && (
           <div className="slideshow-details">
             {current.name && <h3>{current.name}</h3>}

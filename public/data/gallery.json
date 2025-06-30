@@ -1,26 +1,26 @@
 {
   "Casual": [
     {
-      "img": "gallery/image2.jpg",
+      "img": "image2",
       "description": "Light, fresh, and comfy"
     },
     {
-      "img": "gallery/image3.jpg",
+      "img": "image3",
       "description": "Light, fresh, and comfy"
     },
     {
-      "img": "gallery/image4.jpg",
+      "img": "image4",
       "description": "Light, fresh, and comfy"
     }
   ],
   "Cosplay": [
     {
-      "img": "gallery/image1.jpg",
+      "img": "image1",
       "sub": "Puppy",
       "description": "All-out glam with glitter and shine"
     },
     {
-      "img": "gallery/image5.jpg",
+      "img": "image5",
       "sub": "Puppy",
       "description": "Golden hour perfection"
     }

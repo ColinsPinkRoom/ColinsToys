@@ -52,3 +52,21 @@
   border-radius: 12px;
   box-shadow: 0 0 12px rgba(255, 150, 200, 0.25);
 }
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-loading {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
