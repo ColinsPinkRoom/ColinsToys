@@ -47,7 +47,7 @@
   width: 350px;
   height: auto;
   margin-top: 15px;
-
+  min-height: 500px;
   object-fit: contain;
   border-radius: 12px;
   box-shadow: 0 0 12px rgba(255, 150, 200, 0.25);

@@ -8,7 +8,7 @@ import { format, quality } from "@cloudinary/url-gen/actions/delivery";
 
 const cld = new Cloudinary({
   cloud: {
-    cloudName: "dqduer2pc", // ✅ Use your own Cloudinary cloud name
+    cloudName: "dqduer2pc",
   },
 });
 
@@ -30,12 +30,23 @@ function SlideShow({ items = [], gallery }) {
   }, [items, currentSlide]);
 
   useEffect(() => {
-    setImageLoaded(false);
-    const imgEl = imageRef.current?.getElementsByTagName("img")[0];
-    if (imgEl) {
-      imgEl.onload = () => setImageLoaded(true);
+    if (!gallery || !items[currentSlide]?.img) {
+      setImageLoaded(true);
+      return;
     }
-  }, [currentSlide]);
+
+    setImageLoaded(false);
+
+    const preloadImg = new window.Image();
+    const preloadCldImg = cld
+      .image(items[currentSlide].img)
+      .resize(scale().width(900))
+      .delivery(format("auto"))
+      .delivery(quality("auto"));
+
+    preloadImg.src = preloadCldImg.toURL();
+    preloadImg.onload = () => setImageLoaded(true);
+  }, [currentSlide, items, gallery]);
 
   const handlePrev = () => {
     if (items.length === 0) return;
@@ -123,16 +134,19 @@ function SlideShow({ items = [], gallery }) {
               <div className="spinner"></div>
             </div>
           )}
-          {gallery ? (
+
+          {imageLoaded && gallery && (
             <AdvancedImage
               cldImg={cldImg}
               className="slideshow-img"
               style={{
-                opacity: imageLoaded ? 1 : 0,
+                opacity: 1,
                 transition: "opacity 0.4s ease-in-out",
               }}
             />
-          ) : (
+          )}
+
+          {!gallery && (
             <img
               src={current.img}
               alt={current.name || "Gallery image"}
