@@ -16,8 +16,8 @@ import "./style/App.css";
 function App() {
   return (
     <div id="App">
-      <Link to="">
-        <div className="logo-container">
+      <Link className="logo-container" to="">
+        <div>
           <img
             src={`${import.meta.env.BASE_URL}/logos/Logo-website.svg`}
             alt="Logo"
