@@ -22,8 +22,8 @@ export default function Navigation() {
       </button>
 
       <nav className="nav-bar">
-        {/* Desktop nav */}
-        <div className="nav-links">
+        {/* Top row: primary */}
+        <div className="nav-links primary-nav">
           <NavLink className={navClass} to="">
             Home
           </NavLink>
@@ -33,6 +33,13 @@ export default function Navigation() {
           <NavLink className={navClass} to="/gallery">
             Gallery
           </NavLink>
+          <NavLink className={navClass} to="/contact">
+            Contact
+          </NavLink>
+        </div>
+
+        {/* Bottom row: secondary */}
+        <div className="nav-links secondary-nav">
           <NavLink className={navClass} to="/prices">
             Prices
           </NavLink>
@@ -41,9 +48,6 @@ export default function Navigation() {
           </NavLink>
           <NavLink className={navClass} to="/socials">
             Socials
-          </NavLink>
-          <NavLink className={navClass} to="/contact">
-            Contact
           </NavLink>
         </div>
       </nav>

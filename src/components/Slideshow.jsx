@@ -97,6 +97,7 @@ function SlideShow({ items = [], gallery }) {
   }
 
   const cldImg = cld.image(current.img);
+
   cldImg
     .resize(scale().width(900))
     .delivery(format("auto"))
