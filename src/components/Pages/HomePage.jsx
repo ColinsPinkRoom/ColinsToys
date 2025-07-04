@@ -2,6 +2,19 @@ import React, { useEffect, useState } from "react";
 import "../../style/Home.css";
 import Slideshow from "../../components/Slideshow";
 
+import CloudImage from "../CloudImage";
+
+import { Cloudinary } from "@cloudinary/url-gen";
+import { AdvancedImage } from "@cloudinary/react";
+import { scale } from "@cloudinary/url-gen/actions/resize";
+import { format, quality } from "@cloudinary/url-gen/actions/delivery";
+
+const cld = new Cloudinary({
+  cloud: {
+    cloudName: "dqduer2pc",
+  },
+});
+
 function HomePage() {
   const [featuredToys, setFeaturedToys] = useState([]);
 
@@ -17,6 +30,12 @@ function HomePage() {
         console.error("❌ Failed to load featured toys:", err);
       });
   }, []);
+
+  const img = cld
+    .image("images/home-image")
+    .resize(scale().width(900))
+    .delivery(format("auto"))
+    .delivery(quality("auto"));
 
   return (
     <div className="home-container">
@@ -45,11 +64,13 @@ function HomePage() {
 
       {/* 2. Profile Picture */}
       <section className="profile-image-section">
-        <img
-          src={`${import.meta.env.BASE_URL}/images/home-image.jpg`}
-          alt="Colin"
-          className="selfie-image"
-          loading="lazy"
+        <CloudImage
+          link="images/home-image"
+          alt="Socials"
+          nameOfClass="selfie-image"
+          widths={300}
+          heights={400}
+          transform={(img) => img.resize(scale().width(900))}
         />
       </section>
 

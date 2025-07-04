@@ -1,6 +1,8 @@
 import React from "react";
 import "../../style/Socials.css";
 
+import CloudImage from "../CloudImage";
+
 function SocialsPage() {
   return (
     <div className="socials-container">
@@ -48,12 +50,12 @@ function SocialsPage() {
 
       {/* 2. Profile Picture */}
       <section className="socials-image-section">
-        <img
-          src={`${import.meta.env.BASE_URL}/images/socials-image.jpg`}
-          width={300}
+        <CloudImage
+          link="images/socials-image"
           alt="Socials"
-          className="socials-image"
-          loading="lazy"
+          nameOfClass="socials-image"
+          widths={300}
+          heights={400}
         />
         <p className="socials-image-text">
           I hope that you will enjoy your stay~
