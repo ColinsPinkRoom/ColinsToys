@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "../../style/Toys.css";
+import "../../style/pages/Toys.css";
 
 function ToysPage() {
   const [products, setProducts] = useState(null);
@@ -8,6 +8,7 @@ function ToysPage() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    // fetch(import.meta.env.BASE_URL + "data/products.jsonss") //Creating an error for testing
     fetch(import.meta.env.BASE_URL + "data/products.json")
       .then((res) => res.json())
       .then((data) => setProducts(data))
@@ -19,14 +20,22 @@ function ToysPage() {
 
   if (error) {
     return (
-      <div id="loadingMessage" style={{ color: "red" }}>
-        {error}
+      <div className="toys-container container">
+        <div id="loadingMessage" style={{ color: "red" }}>
+          {error}
+        </div>
       </div>
     );
   }
 
   if (!products) {
-    return <div id="loadingMessage">Loading products...</div>;
+    return (
+      <div className="toys-container container">
+        <div className="image-loading">
+          <div className="spinner"></div>
+        </div>
+      </div>
+    );
   }
 
   // Get categories in object key order'
@@ -53,7 +62,7 @@ function ToysPage() {
 
   return (
     <>
-      <div className="toys-container">
+      <div className="toys-container container">
         {/* 1. Category Section */}
         <section className="category-layout">
           <div className="category-menu">

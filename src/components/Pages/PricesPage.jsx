@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import "../../style/Prices.css";
+import "../../style/pages/Prices.css";
 
 function PricesPage() {
   const [products, setProducts] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    // fetch(import.meta.env.BASE_URL + "data/prices.jsonss") //Creating an error for testing
     fetch(import.meta.env.BASE_URL + "data/prices.json")
       .then((res) => res.json())
       .then((data) => setProducts(data))
@@ -17,18 +18,26 @@ function PricesPage() {
 
   if (error) {
     return (
-      <div id="loadingMessage" style={{ color: "red" }}>
-        {error}
+      <div className="prices-container container">
+        <div id="loadingMessage" style={{ color: "red" }}>
+          {error}
+        </div>
       </div>
     );
   }
 
   if (!products) {
-    return <div id="loadingMessage">Loading products...</div>;
+    return (
+      <div className="prices-container container">
+        <div className="image-loading">
+          <div className="spinner"></div>
+        </div>
+      </div>
+    );
   }
 
   return (
-    <div className="prices-container">
+    <div className="prices-container container">
       <h2 className="prices-title">Prices</h2>
 
       {/* 1. Grid Section */}

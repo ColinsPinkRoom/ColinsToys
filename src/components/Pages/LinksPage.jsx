@@ -1,9 +1,9 @@
 import React from "react";
-import "../../style/Links.css";
+import "../../style/pages/Links.css";
 
 function LinksPage() {
   return (
-    <div className="links-container">
+    <div className="links-container container">
       <div className="hero-image-wrapper">
         <img
           src={`${import.meta.env.BASE_URL}/images/banner.jpg`}

@@ -1,11 +1,11 @@
 import React from "react";
-import "../../style/Socials.css";
+import "../../style/pages/Socials.css";
 
 import CloudImage from "../CloudImage";
 
 function SocialsPage() {
   return (
-    <div className="socials-container">
+    <div className="socials-container container">
       {/* 1. Links Section */}
       <section className="socials-link-section">
         <div className="socials-groups">

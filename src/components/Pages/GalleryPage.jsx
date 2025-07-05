@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SlideShow from "../Slideshow";
 import CategorySelector from "../CategorySelector";
-import "../../style/Gallery.css";
+import "../../style/pages/Gallery.css";
 
 function GalleryPage() {
   const [galleryData, setGalleryData] = useState(null);
@@ -47,7 +47,7 @@ function GalleryPage() {
     : activeItems;
 
   return (
-    <div className="gallery-page-container">
+    <div className="gallery-page-container container">
       <h2 className="gallery-title">My Favorite Looks 💖</h2>
 
       <CategorySelector
