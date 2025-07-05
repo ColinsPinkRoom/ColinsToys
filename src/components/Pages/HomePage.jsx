@@ -1,19 +1,10 @@
 import React, { useEffect, useState } from "react";
-import "../../style/Home.css";
+import "../../style/pages/Home.css";
 import Slideshow from "../../components/Slideshow";
 
 import CloudImage from "../CloudImage";
 
-import { Cloudinary } from "@cloudinary/url-gen";
-import { AdvancedImage } from "@cloudinary/react";
 import { scale } from "@cloudinary/url-gen/actions/resize";
-import { format, quality } from "@cloudinary/url-gen/actions/delivery";
-
-const cld = new Cloudinary({
-  cloud: {
-    cloudName: "dqduer2pc",
-  },
-});
 
 function HomePage() {
   const [featuredToys, setFeaturedToys] = useState([]);
@@ -31,14 +22,8 @@ function HomePage() {
       });
   }, []);
 
-  const img = cld
-    .image("images/home-image")
-    .resize(scale().width(900))
-    .delivery(format("auto"))
-    .delivery(quality("auto"));
-
   return (
-    <div className="home-container">
+    <div className="home-container container">
       {/* 1. Hero Section */}
       <section className="hero-section">
         <h2 id="homeTitle">Welcome to Colin's Pink Room 💕</h2>

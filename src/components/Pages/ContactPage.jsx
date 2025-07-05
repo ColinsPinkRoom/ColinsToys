@@ -1,12 +1,12 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
-import "../../style/Contact.css";
+import "../../style/pages/Contact.css";
 
 function ContactPage() {
   const [state, handleSubmit] = useForm("mwpbblow"); // your unique Form ID
 
   return (
-    <div className="contact-container">
+    <div className="container contact-container">
       <h2 className="contact-title">Contact Me</h2>
       {state.succeeded ? (
         <p className="contact-success">✅ Thanks for your message!</p>
