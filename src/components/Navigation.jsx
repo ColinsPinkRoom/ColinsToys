@@ -18,7 +18,20 @@ export default function Navigation() {
     <>
       {/* Hamburger (mobile only) */}
       <button className="hamburger" onClick={toggleMenu}>
-        ☰
+        <svg
+          className="hamburger-icon"
+          viewBox="0 0 100 80"
+          width="28"
+          height="28"
+          fill="none"
+          stroke="#6b2b4d"
+          strokeWidth="8"
+          strokeLinecap="round"
+        >
+          <line x1="10" y1="20" x2="90" y2="20" />
+          <line x1="10" y1="40" x2="90" y2="40" />
+          <line x1="10" y1="60" x2="90" y2="60" />
+        </svg>
       </button>
 
       <nav className="nav-bar">
@@ -55,7 +68,19 @@ export default function Navigation() {
       {/* Mobile Drawer Menu */}
       <div className={`mobile-drawer ${menuOpen ? "open" : ""}`}>
         <button className="close-button" onClick={closeMenu}>
-          ✕
+          <svg
+            className="close-icon"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="#6b2b4d"
+            strokeWidth="3"
+            strokeLinecap="round"
+          >
+            <line x1="4" y1="4" x2="20" y2="20" />
+            <line x1="20" y1="4" x2="4" y2="20" />
+          </svg>
         </button>
         <NavLink className={drawerClass} to="" onClick={closeMenu}>
           Home
