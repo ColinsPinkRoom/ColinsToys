@@ -107,6 +107,11 @@ h6 {
   margin: 0.6em 0 0.6em;
   text-align: center;
   text-shadow: 1px 1px 3px rgba(255, 240, 245, 0.8);
+
+  user-select: none;
+}
+label {
+  user-select: none;
 }
 
 h1 {
@@ -136,6 +141,7 @@ a {
   font-weight: 500;
   text-decoration: none;
   transition: color 0.2s ease;
+  user-select: none;
 }
 
 a:hover {
@@ -242,6 +248,19 @@ hr {
 .hr-underline {
   margin-top: 0;
   box-shadow: rgb(255 150 212 / 41%) 0px 3px 5px 2px;
+}
+
+.titleText {
+  font-family: "Lily Script One", cursive;
+  font-size: 2.2rem;
+  color: #d14c8b;
+  margin-bottom: 24px;
+  background: linear-gradient(to right, #ff248c, #ff0079);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 1px rgba(255, 240, 245, 0.6);
+  text-align: center;
 }
 
 /* === Footer === */

@@ -29,7 +29,7 @@ function GalleryPage() {
 
   if (!galleryData || !activeCategory) {
     return (
-      <div className="image-loading">
+      <div className="gallery-page-container container">
         <div className="spinner"></div>
       </div>
     );

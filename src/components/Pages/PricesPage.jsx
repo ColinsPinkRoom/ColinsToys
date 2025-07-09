@@ -38,7 +38,7 @@ function PricesPage() {
 
   return (
     <div className="prices-container container">
-      <h2 className="prices-title">Prices</h2>
+      <h2 className="prices-title titleText">Prices</h2>
 
       {/* 1. Grid Section */}
       <section className="prices-grid-section">
