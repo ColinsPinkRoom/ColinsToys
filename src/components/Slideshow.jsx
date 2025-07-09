@@ -1,16 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../style/Slideshow.css";
 
-import { Cloudinary } from "@cloudinary/url-gen";
+import { cld } from "../utils/cloudinary";
+
 import { AdvancedImage } from "@cloudinary/react";
 import { scale } from "@cloudinary/url-gen/actions/resize";
 import { format, quality } from "@cloudinary/url-gen/actions/delivery";
-
-const cld = new Cloudinary({
-  cloud: {
-    cloudName: "dqduer2pc",
-  },
-});
 
 function SlideShow({ items = [], gallery }) {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -20,15 +15,18 @@ function SlideShow({ items = [], gallery }) {
   const [dragOffsetX, setDragOffsetX] = useState(0);
   const [imageLoaded, setImageLoaded] = useState(false);
   const imageRef = useRef(null);
-
   const swipeThreshold = 50;
 
+  // Ensure currentSlide stays in bounds when items change
   useEffect(() => {
-    if (currentSlide >= items.length) {
+    if (items.length === 0) {
       setCurrentSlide(0);
+    } else if (currentSlide >= items.length) {
+      setCurrentSlide(items.length - 1);
     }
-  }, [items, currentSlide]);
+  }, [items]);
 
+  // Preload Cloudinary image if gallery is true
   useEffect(() => {
     if (!gallery || !items[currentSlide]?.img) {
       setImageLoaded(true);
@@ -37,35 +35,35 @@ function SlideShow({ items = [], gallery }) {
 
     setImageLoaded(false);
 
-    const preloadImg = new window.Image();
-    const preloadCldImg = cld
+    const preload = new window.Image();
+    const cldImg = cld
       .image(items[currentSlide].img)
       .resize(scale().width(900))
       .delivery(format("auto"))
       .delivery(quality("auto"));
 
-    preloadImg.src = preloadCldImg.toURL();
-    preloadImg.onload = () => setImageLoaded(true);
+    preload.src = cldImg.toURL();
+    preload.onload = () => setImageLoaded(true);
   }, [currentSlide, items, gallery]);
 
   const handlePrev = () => {
     if (items.length === 0) return;
     setSlideRight(false);
     setSlideLeft(false);
-    setTimeout(() => {
+    requestAnimationFrame(() => {
       setCurrentSlide((prev) => (prev === 0 ? items.length - 1 : prev - 1));
       setSlideLeft(true);
-    }, 10);
+    });
   };
 
   const handleNext = () => {
     if (items.length === 0) return;
     setSlideRight(false);
     setSlideLeft(false);
-    setTimeout(() => {
+    requestAnimationFrame(() => {
       setCurrentSlide((prev) => (prev === items.length - 1 ? 0 : prev + 1));
       setSlideRight(true);
-    }, 10);
+    });
   };
 
   const handlePointerDown = (e) => {
@@ -96,12 +94,14 @@ function SlideShow({ items = [], gallery }) {
     return <div className="featured-toy-loading">Invalid slide data.</div>;
   }
 
-  const cldImg = cld.image(current.img);
-
-  cldImg
-    .resize(scale().width(900))
-    .delivery(format("auto"))
-    .delivery(quality("auto"));
+  // Only rebuild cldImg if gallery is true
+  const cldImg = gallery
+    ? cld
+        .image(current.img)
+        .resize(scale().width(900))
+        .delivery(format("auto"))
+        .delivery(quality("auto"))
+    : null;
 
   return (
     <div className="slideshow-container">
@@ -130,20 +130,11 @@ function SlideShow({ items = [], gallery }) {
         onTouchEnd={handlePointerUp}
       >
         <div className="image-wrapper" ref={imageRef}>
-          {!imageLoaded && gallery && (
-            <div className="image-loading">
-              <div className="spinner"></div>
-            </div>
-          )}
-
-          {imageLoaded && gallery && (
+          {gallery && cldImg && (
             <AdvancedImage
               cldImg={cldImg}
-              className="slideshow-img"
-              style={{
-                opacity: 1,
-                transition: "opacity 0.4s ease-in-out",
-              }}
+              className={`slideshow-img ${imageLoaded ? "loaded" : ""}`}
+              onLoad={() => setImageLoaded(true)}
             />
           )}
 
@@ -151,7 +142,7 @@ function SlideShow({ items = [], gallery }) {
             <img
               src={current.img}
               alt={current.name || "Gallery image"}
-              className="slideshow-img"
+              className={`slideshow-img ${imageLoaded ? "loaded" : ""}`}
               loading="lazy"
             />
           )}

@@ -1,5 +1,7 @@
 // src/components/CategorySelector.jsx
 
+import "../style/CategorySelector.css";
+
 function CategorySelector({
   categories = [],
   activeCategory,
