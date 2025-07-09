@@ -48,7 +48,7 @@ function PricesPage() {
             key={category}
             style={{ gridArea: `area${index}` }}
           >
-            <h3 className="category-title">{category}</h3>
+            <h3 className="prices-category-title">{category}</h3>
             {items.map((item, itemIndex) => (
               <div className="prices-box" key={itemIndex}>
                 <span className="item-name">{item.name}</span>
