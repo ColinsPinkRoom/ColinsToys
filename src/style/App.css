@@ -188,15 +188,6 @@ hr {
 
 /* === Responsive Layout === */
 @media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  .nav-bar,
-  .nav-links {
-    display: none;
-  }
-
   #mainTitle {
     margin-bottom: 40px;
   }

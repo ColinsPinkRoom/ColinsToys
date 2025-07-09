@@ -95,7 +95,6 @@
   font-size: 28px;
   font-weight: bold;
 
-  display: flex;
   align-items: center;
   justify-content: center;
 
@@ -137,7 +136,7 @@
 .mobile-drawer {
   position: fixed;
   top: 0;
-  left: -100%;
+  left: 0;
   width: 85%;
   max-width: 320px;
   height: 100vh;
@@ -153,20 +152,27 @@
     rgba(255, 240, 250, 0.8)
   );
   border-right: 2px solid rgba(255, 170, 210, 0.4);
-
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 6px 0 18px rgba(0, 0, 0, 0.3);
-
   border-top-right-radius: 18px;
   border-bottom-right-radius: 18px;
 
+  box-shadow: 6px 0 18px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
   z-index: 1000;
-  transition: left 0.35s ease-in-out;
+  transition: transform 0.35s ease, opacity 0.3s ease;
+
+  transform: translateX(-100%);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 
 .mobile-drawer.open {
-  left: 0;
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
 }
 
 /* === Drawer Links === */
