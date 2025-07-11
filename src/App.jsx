@@ -1,6 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 
+import NavigationMobile from "./components/NavigationMobile.jsx";
+
 import Navigation from "./components/Navigation.jsx";
 import HomePage from "./components/Pages/HomePage.jsx";
 import ToysPage from "./components/Pages/ToysPage.jsx";
@@ -17,6 +19,7 @@ function App() {
   return (
     <>
       <div id="background-overlay"></div>
+      <NavigationMobile />
       <div id="App">
         <Link className="logo-container" to="">
           <div>
