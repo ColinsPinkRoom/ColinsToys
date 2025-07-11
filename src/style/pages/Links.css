@@ -1,79 +1,99 @@
 /* ===== Container & Layout ===== */
 .container.links-container {
-  justify-content: space-around;
-  flex-wrap: wrap;
-  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px;
 }
 
 /* ===== Hero Image Section ===== */
 .hero-image-wrapper {
+  position: relative;
   width: 100%;
   height: 200px;
   margin-bottom: 32px;
-
   border-radius: 20px;
   overflow: hidden;
 }
 
+/* Both images should be stacked */
 .hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  object-fit: cover;
 
   border-radius: 20px;
-  box-shadow: 0 5px 20px rgb(255, 160, 210);
+  transition: opacity 0.8s ease;
+  display: block;
 }
 
-/* ===== Link Grid Container ===== */
-.links-section {
+/* Optional: blur effect on placeholder */
+.hero-image.placeholder {
+  filter: blur(12px);
+  transform: scale(1.05); /* subtle zoom for better feel */
+  z-index: 1;
+}
+
+/* Full-res image */
+.hero-image.full {
+  z-index: 2;
+}
+
+/* ===== Page Title ===== */
+.links-title {
+  font-size: 32px;
+  color: #8b2e4e;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* ===== Grid Section ===== */
+.links-grid-section {
   width: 100%;
   max-width: 960px;
 }
 
-/* ===== Grid Layout for Link Cards ===== */
 .links-grid {
   display: grid;
   gap: 32px;
   padding: 0 12px;
-
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas:
     "area0 area0 area1 area1"
     ". area2 area2 .";
 }
 
-/* ===== Individual Link Card ===== */
+/* ===== Link Card ===== */
 .link-card {
-  background: #fff4f9;
+  background: #fff8fb;
   padding: 20px;
-
+  border-radius: 20px;
+  border: 1px solid #f1cbd7;
+  box-shadow: 0 8px 20px rgba(255, 160, 210, 0.15);
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(255, 160, 210, 0.2);
-
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .link-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(255, 120, 180, 0.3);
+  box-shadow: 0 12px 24px rgba(255, 120, 180, 0.25);
 }
 
-/* ===== Link Title Style ===== */
-.link-title {
+/* ===== Link Card Title ===== */
+.link-card-title {
   font-family: "Lily Script One", cursive;
-  font-size: 24px;
-  color: #d4427c;
+  font-size: 22px;
+  color: #a93a6c;
   text-align: center;
-
   margin-bottom: 16px;
-  text-shadow: 0 1px 1px #fff0f8;
 }
 
-/* ===== Button Link Inside Card ===== */
+/* ===== Buttons Inside Link Cards ===== */
 .link-card a {
   display: flex;
   align-items: center;
@@ -102,13 +122,13 @@
   transform: scale(1.04);
 }
 
-/* ===== Icon inside Button Link ===== */
+/* ===== Icons ===== */
 .link-card a img {
   width: 24px;
   height: 24px;
 }
 
-/* ===== Responsive Layout ===== */
+/* ===== Responsive Design ===== */
 @media (max-width: 768px) {
   .links-grid {
     grid-template-columns: 1fr;

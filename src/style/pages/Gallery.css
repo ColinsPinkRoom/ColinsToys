@@ -1,5 +1,5 @@
 .container.gallery-page-container {
-  min-height: 900px;
+  display: flex;
 }
 
 .gallery-title {
