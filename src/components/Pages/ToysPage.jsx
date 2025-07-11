@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import "../../style/pages/Toys.css";
 
+import CategorySelector from "../CategorySelector";
+
 function ToysPage() {
   const [products, setProducts] = useState(null);
   const [activeCategory, setActiveCategory] = useState("Dildos");
@@ -64,54 +66,20 @@ function ToysPage() {
     <>
       <div className="toys-container container">
         {/* 1. Category Section */}
-        <section className="category-layout">
-          <div className="category-menu">
-            {categories.map((category) => (
-              <button
-                key={category}
-                className={`category-tab ${
-                  activeCategory === category ? "active" : ""
-                }`}
-                onClick={() => {
-                  setActiveCategory(category);
-                  setActiveSubcategory(null); // Reset subcategory when changing main category
-                }}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </section>
-        <h4 className="category-title">{activeCategory}</h4>
+        <CategorySelector
+          categories={categories}
+          activeCategory={activeCategory}
+          onCategoryChange={(category) => {
+            setActiveCategory(category);
+            setActiveSubcategory(null); // Reset subcategory on category change
+          }}
+          subcategories={subcategories}
+          activeSubcategory={activeSubcategory}
+          onSubcategoryChange={setActiveSubcategory}
+          title={activeCategory}
+        />
 
-        {/* 2. Sub Category Section */}
-        {subcategories.length > 0 && (
-          <section className="toys-subcategory-section">
-            <div className="subcategory-menu">
-              <button
-                className={`subcategory-tab ${
-                  activeSubcategory === null ? "active" : ""
-                }`}
-                onClick={() => setActiveSubcategory(null)}
-              >
-                All
-              </button>
-              {subcategories.map((sub) => (
-                <button
-                  key={sub}
-                  className={`subcategory-tab ${
-                    activeSubcategory === sub ? "active" : ""
-                  }`}
-                  onClick={() => setActiveSubcategory(sub)}
-                >
-                  {sub}
-                </button>
-              ))}
-            </div>
-          </section>
-        )}
-
-        {/* 3. Toys Section */}
+        {/* 2. Toys Section */}
         <section className="toys-list-section">
           {sortedItems.map((item, index) => (
             <div key={index} className="toys-item">

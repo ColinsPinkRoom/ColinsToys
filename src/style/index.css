@@ -5,6 +5,15 @@
   box-sizing: border-box;
 }
 
+/* === Root Color Variables === */
+:root {
+  --pink-main: #ff69b4;
+  --pink-soft: #ffc0cb;
+  --pink-deep: #e75480;
+  --text-main: #333;
+  --bg-base: #fafafa;
+}
+
 /* === Base HTML & Body Setup === */
 html,
 body {
@@ -17,13 +26,15 @@ body {
 /* === Root Scrollbar Behavior === */
 html {
   scrollbar-gutter: stable both-edges;
+  scroll-behavior: smooth;
 }
 
 /* === Body Base Styles === */
 body {
-  background-color: #fafafa;
-  font-family: "Helvetica", Arial, sans-serif;
-  color: #333;
+  background-color: var(--bg-base);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--text-main);
+  line-height: 1.6;
   position: relative; /* Needed for ::before overlay */
 }
 
@@ -37,7 +48,20 @@ body::before {
   height: 100vh;
   background: url("https://images.stockcake.com/public/4/2/d/42d2b457-c2cf-4c21-b78e-4175a3761a4d_large/cozy-bedroom-decor-stockcake.jpg")
     no-repeat center center / cover;
+  background-attachment: fixed;
   filter: blur(8px) brightness(0.7);
   z-index: -1;
   pointer-events: none;
+}
+
+/* === Dark Mode Support === */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111;
+    color: #eee;
+  }
+
+  body::before {
+    filter: blur(8px) brightness(0.4);
+  }
 }

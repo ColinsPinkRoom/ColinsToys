@@ -1,80 +1,28 @@
-/* ===== Container & Layout ===== */
+/* ===== Container ===== */
 .container.prices-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-/* ===== Titles ===== */
-.prices-title {
-  text-align: center;
-  font-size: 32px;
-  color: #8b2e4e;
-  margin-bottom: 30px;
-}
-
-/* ===== Links Section ===== */
-.prices-links {
-  display: flex;
   flex-direction: column;
-  gap: 32px;
+  align-items: center;
+  padding: 40px 20px;
+
+  border-radius: 24px;
 }
 
-/* ===== Price Category Box ===== */
-.prices-category {
-  background-color: #fff8fb;
-  padding: 16px;
-  border-radius: 12px;
-  border: 1px solid #f1cbd7;
-}
-
-/* Category Title Styling */
-.category-title {
-  font-size: 24px;
-  color: #a93a6c;
-  margin-bottom: 16px;
-  padding-bottom: 4px;
-  border-bottom: 1px dashed #e7aac5;
-}
-
-/* ===== Price Rows ===== */
-.prices-box {
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 0;
-  font-size: 18px;
-  border-bottom: 1px solid #f1d2e2;
-}
-
-/* Item Name & Price */
-.item-name {
-  color: #6e2f4f;
-}
-
-.item-price {
-  font-weight: bold;
-  color: #8b2e4e;
-}
-
-/* ===== Notes & Messages ===== */
-.prices-payment-note,
-.prices-tts-message {
-  font-size: 14px;
-  line-height: 1.5;
-  margin-top: 16px;
+/* ===== Page Title ===== */
+.prices-title {
+  font-family: "Lily Script One", cursive;
+  font-size: 2.5rem;
+  color: #d14c8b;
+  margin-bottom: 40px;
   text-align: center;
-
-  background-color: #fff8fb;
-  padding: 16px;
-  border-radius: 12px;
-  border: 1px solid #f1cbd7;
+  background: linear-gradient(to right, #d14c8b, #ffaad2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 1px rgba(255, 240, 245, 0.5);
 }
 
-.prices-tts-message {
-  font-size: 16px;
-}
-
-/* ===== Grid Layout for Price Sections ===== */
+/* ===== Grid Section (Preserving Areas) ===== */
 .prices-grid-section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -84,10 +32,87 @@
     ". area3 area3 ."
     "area4 area4 area5 area5";
   gap: 32px;
+  width: 100%;
+  max-width: 1100px;
 }
 
-/* ===== Responsive Design ===== */
-@media (max-width: 600px) {
+/* ===== Price Category Boxes (Grid Area Preserved) ===== */
+.prices-category {
+  background: rgba(255, 240, 250, 0.85);
+  backdrop-filter: blur(6px);
+  border: 1px solid #f6c5da;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(220, 120, 160, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+.prices-category:hover {
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4),
+    0 0 12px rgba(255, 182, 193, 0.3);
+}
+
+/* ===== Category Title ===== */
+.prices-category-title {
+  font-size: 20px;
+  color: #b03c6c;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #ffc9e2;
+  padding-bottom: 8px;
+}
+
+/* ===== Price Rows ===== */
+.prices-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px dashed #f9d0e2;
+  font-size: 16px;
+  color: #5a1c3b;
+}
+
+.item-name {
+  font-weight: 500;
+}
+
+.item-price {
+  font-weight: bold;
+  color: #8b2e4e;
+}
+
+/* ===== Notes & TTS ===== */
+.prices-payment-note,
+.prices-tts-message {
+  background: rgba(255, 245, 250, 0.75);
+  border: 1px solid #f5c8da;
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 36px;
+  max-width: 700px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(255, 180, 200, 0.15);
+  font-size: 15px;
+  line-height: 1.6;
+  color: #6e2f4f;
+}
+
+.prices-payment-note h3,
+.prices-tts-message h3 {
+  font-size: 18px;
+  color: #a23d6b;
+  margin-bottom: 8px;
+}
+
+/* ===== Error & Loading ===== */
+#loadingMessage {
+  font-size: 16px;
+  color: #cc3366;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ===== Responsive Layout ===== */
+@media (max-width: 768px) {
   .prices-grid-section {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -97,5 +122,20 @@
       "area3"
       "area4"
       "area5";
+    gap: 24px;
+  }
+
+  .prices-category {
+    padding: 16px;
+  }
+
+  .prices-box {
+    font-size: 15px;
+  }
+
+  .prices-payment-note,
+  .prices-tts-message {
+    margin-top: 24px;
+    font-size: 14px;
   }
 }

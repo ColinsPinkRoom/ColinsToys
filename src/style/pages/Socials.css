@@ -30,22 +30,31 @@
 .socials-card {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 16px;
+  gap: 16px;
+  padding: 24px;
 
-  background: #fff0f7;
-  border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(255, 180, 220, 0.25);
-  animation: fadeIn 0.3s ease;
+  background: linear-gradient(145deg, #ffeaf5, #fff7fb);
+  border: 2px solid rgba(255, 190, 230, 0.4);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(255, 180, 220, 0.3);
+  backdrop-filter: blur(8px);
+  animation: fadeIn 0.4s ease;
+  transition: box-shadow 0.3s ease;
+}
+
+.socials-card:hover {
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4),
+    0 0 12px rgba(255, 182, 193, 0.3);
 }
 
 /* ==== Card Title ==== */
 .socials-title {
-  font-family: "Segoe UI", sans-serif;
-  font-size: 22px;
-  color: #8b3a62;
-  margin-bottom: 8px;
-  text-shadow: 1px 1px 2px rgba(255, 240, 245, 0.8);
+  font-family: "Lily Script One", cursive;
+  font-size: 26px;
+  color: #a04070;
+  text-align: center;
+  margin-bottom: 4px;
+  text-shadow: 1px 1px 3px rgba(255, 240, 250, 0.9);
 }
 
 /* ==== Social Links ==== */
@@ -55,25 +64,41 @@
   gap: 12px;
 
   font-size: 18px;
-  font-weight: 600;
-  color: #7b2e48;
+  font-weight: 500;
+  color: #812d53;
   text-decoration: none;
 
-  padding: 10px 14px;
-  border-radius: 12px;
-  background: rgba(255, 240, 245, 0.6);
-  transition: background-color 0.3s, transform 0.3s;
+  padding: 10px 16px;
+  border-radius: 14px;
+  background: rgba(255, 240, 245, 0.55);
+  backdrop-filter: blur(4px);
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 6px rgba(255, 190, 220, 0.2);
+
+  opacity: 0;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.socials-card a:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.socials-card a:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.socials-card a:nth-child(4) {
+  animation-delay: 0.3s;
 }
 
 .socials-card a:hover {
-  background-color: rgba(255, 220, 235, 0.9);
-  transform: scale(1.05);
+  background: rgba(255, 225, 240, 0.9);
+  transform: scale(1.03);
 }
 
 /* ==== Link Icons ==== */
 .socials-card img {
   width: 28px;
   height: 28px;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
 }
 
 /* ==== Image Section (Right Side) ==== */
@@ -86,6 +111,12 @@
   width: 100%;
   max-width: 300px;
   gap: 10px;
+
+  background: rgba(255, 240, 250, 0.5);
+  padding: 24px;
+  padding-top: 0;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(255, 190, 230, 0.2);
 }
 
 /* ==== Image Description ==== */

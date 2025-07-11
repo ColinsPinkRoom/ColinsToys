@@ -1,22 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../style/pages/Links.css";
 
 function LinksPage() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
   return (
     <div className="links-container container">
+      {/* Hero Image Banner */}
+
       <div className="hero-image-wrapper">
+        {/* Blur placeholder image */}
+        <img
+          src={`${import.meta.env.BASE_URL}/images/banner-blur.jpg`}
+          alt=""
+          className="hero-image placeholder"
+          aria-hidden="true"
+          style={{ opacity: isLoaded ? 0 : 1 }}
+        />
+
+        {/* Full image */}
         <img
           src={`${import.meta.env.BASE_URL}/images/banner.jpg`}
-          alt="Welcome to Colin's Pink Room"
-          className="hero-image"
+          alt="Colin's Pink Room Banner"
+          className="hero-image full"
+          onLoad={() => setIsLoaded(true)}
           loading="lazy"
+          style={{ opacity: isLoaded ? 1 : 0 }}
         />
       </div>
 
-      <section className="links-section">
+      {/* Page Title */}
+      <h2 className="links-title titleText">My Links</h2>
+
+      {/* Link Cards Grid */}
+      <section className="links-grid-section">
         <div className="links-grid">
-          <div className="link-card" style={{ gridArea: `area0` }}>
-            <h2 className="link-title">Order the content of your dreams 💭</h2>
+          {/* Custom Content */}
+          <div className="link-card" style={{ gridArea: "area0" }}>
+            <h3 className="link-card-title">
+              Order the content of your dreams 💭
+            </h3>
             <a
               href="https://iwantclips.com/store/1452122/ColinsPinkRoom"
               target="_blank"
@@ -30,8 +53,9 @@ function LinksPage() {
             </a>
           </div>
 
-          <div className="link-card" style={{ gridArea: `area1` }}>
-            <h2 className="link-title">See Premium Content ✨</h2>
+          {/* Premium Content */}
+          <div className="link-card" style={{ gridArea: "area1" }}>
+            <h3 className="link-card-title">See Premium Content ✨</h3>
             <a
               href="https://onlyfans.com/colins_pink_room"
               target="_blank"
@@ -56,8 +80,9 @@ function LinksPage() {
             </a>
           </div>
 
-          <div className="link-card" style={{ gridArea: `area2` }}>
-            <h2 className="link-title">Catch Me Live 🎥</h2>
+          {/* Live Streams */}
+          <div className="link-card" style={{ gridArea: "area2" }}>
+            <h3 className="link-card-title">Catch Me Live 🎥</h3>
             <a
               href="https://stripchat.com/Colins_Pink_Room/follow-me"
               target="_blank"

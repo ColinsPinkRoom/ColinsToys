@@ -38,7 +38,7 @@ function PricesPage() {
 
   return (
     <div className="prices-container container">
-      <h2 className="prices-title">Prices</h2>
+      <h2 className="prices-title titleText">Prices</h2>
 
       {/* 1. Grid Section */}
       <section className="prices-grid-section">
@@ -48,7 +48,7 @@ function PricesPage() {
             key={category}
             style={{ gridArea: `area${index}` }}
           >
-            <h3 className="category-title">{category}</h3>
+            <h3 className="prices-category-title">{category}</h3>
             {items.map((item, itemIndex) => (
               <div className="prices-box" key={itemIndex}>
                 <span className="item-name">{item.name}</span>
