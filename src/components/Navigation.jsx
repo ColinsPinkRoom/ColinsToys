@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "../style/Navigation.css";
 
@@ -13,6 +13,18 @@ export default function Navigation() {
 
   const drawerClass = ({ isActive }) =>
     isActive ? "drawer-link active" : "drawer-link";
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
 
   return (
     <>
@@ -88,7 +100,7 @@ export default function Navigation() {
         <NavLink className={drawerClass} to="/products" onClick={closeMenu}>
           Toys
         </NavLink>
-        <NavLink className={navClass} to="/gallery" onClick={closeMenu}>
+        <NavLink className={drawerClass} to="/gallery" onClick={closeMenu}>
           Gallery
         </NavLink>
         <NavLink className={drawerClass} to="/contact" onClick={closeMenu}>

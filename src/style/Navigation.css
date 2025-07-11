@@ -85,7 +85,7 @@
 /* === Hamburger (Mobile) === */
 .hamburger {
   display: none;
-  position: fixed;
+  position: absolute;
   top: 16px;
   left: 16px;
   z-index: 999;
