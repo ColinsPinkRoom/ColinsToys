@@ -39,19 +39,23 @@ body {
 }
 
 /* === Background Overlay === */
-body::before {
-  content: "";
+#background-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   background: url("https://images.stockcake.com/public/4/2/d/42d2b457-c2cf-4c21-b78e-4175a3761a4d_large/cozy-bedroom-decor-stockcake.jpg")
-    no-repeat center center / cover;
-  background-attachment: fixed;
+    center center / cover no-repeat;
   filter: blur(8px) brightness(0.7);
-  z-index: -1;
+  z-index: -10;
   pointer-events: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  #background-overlay {
+    filter: blur(8px) brightness(0.4);
+  }
 }
 
 /* === Dark Mode Support === */
