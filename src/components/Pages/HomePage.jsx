@@ -32,8 +32,8 @@ function HomePage() {
           toys, custom content, and personal connections.
         </p>
         <nav className="home-buttons">
-          <a href="#/products" className="home-btn">
-            🎀 Explore Toys
+          <a href="#/about" className="home-btn">
+            🎀 Who am I?
           </a>
           <a href="#/prices" className="home-btn">
             💰 See Prices

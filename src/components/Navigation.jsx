@@ -25,6 +25,9 @@ export default function Navigation() {
           <NavLink className={navClass} to="/gallery">
             Gallery
           </NavLink>
+          <NavLink className={navClass} to="/prices">
+            Prices
+          </NavLink>
           <NavLink className={navClass} to="/contact">
             Contact
           </NavLink>
@@ -32,14 +35,14 @@ export default function Navigation() {
 
         {/* Bottom row: secondary */}
         <div className="nav-links secondary-nav">
-          <NavLink className={navClass} to="/prices">
-            Prices
-          </NavLink>
           <NavLink className={navClass} to="/links">
             Links
           </NavLink>
           <NavLink className={navClass} to="/socials">
             Socials
+          </NavLink>
+          <NavLink className={navClass} to="/about">
+            About
           </NavLink>
         </div>
       </nav>

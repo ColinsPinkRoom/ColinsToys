@@ -264,6 +264,23 @@ hr {
   text-align: center;
 }
 
+.section-separator {
+  width: 80%;
+  height: 4px;
+  margin: 24px auto;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 20, 145, 0.048),
+    rgba(255, 20, 145, 0.438),
+    rgb(255, 20, 147),
+    rgba(255, 20, 145, 0.438),
+    rgba(255, 20, 145, 0.048)
+  );
+  opacity: 0.2;
+  transition: opacity 0.3s ease-in-out;
+}
+
 /* === Footer === */
 #footer p {
   font-size: 0.8rem;
