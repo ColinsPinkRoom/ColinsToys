@@ -1,6 +1,7 @@
 /* === General Layout === */
 .container.home-container {
   /* Reserved for home-specific tweaks (if needed) */
+  display: flex;
 }
 
 /* === Hero Section === */
