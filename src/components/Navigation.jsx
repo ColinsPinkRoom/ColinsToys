@@ -44,6 +44,9 @@ export default function Navigation() {
           <NavLink className={navClass} to="/about">
             About
           </NavLink>
+          <NavLink className={navClass} to="/updates">
+            Updates
+          </NavLink>
         </div>
       </nav>
     </>

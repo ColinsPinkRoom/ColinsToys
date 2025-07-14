@@ -81,6 +81,9 @@ export default function NavigationMobile() {
         <NavLink className={drawerClass} to="/about" onClick={closeMenu}>
           About
         </NavLink>
+        <NavLink className={drawerClass} to="/updates" onClick={closeMenu}>
+          Updates
+        </NavLink>
       </div>
 
       {/* Backdrop when drawer is open */}
