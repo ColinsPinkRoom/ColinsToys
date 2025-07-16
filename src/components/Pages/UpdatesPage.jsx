@@ -6,7 +6,7 @@ function UpdatesPage() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(import.meta.env.BASE_URL + "data/updates.json")
+    fetch("https://localhost:7147/api/updates") //Endpoint to fetch updates
       .then((res) => {
         if (!res.ok) throw new Error("Network response was not ok");
         return res.json();
@@ -43,7 +43,7 @@ function UpdatesPage() {
         updates.map((update, index) => (
           <div key={index} className="update-item">
             <h3>{update.title}</h3>
-            <h5>{update.date}</h5>
+            <h5>{new Date(update.date).toLocaleDateString()}</h5>
             <p>{update.content}</p>
           </div>
         ))
