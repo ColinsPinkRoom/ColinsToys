@@ -41,8 +41,11 @@ export default function Navigation() {
           <NavLink className={navClass} to="/socials">
             Socials
           </NavLink>
-          <NavLink className={navClass} to="/about">
+          {/* <NavLink className={navClass} to="/about">
             About
+          </NavLink> */}
+          <NavLink className={navClass} to="/updates">
+            Updates
           </NavLink>
         </div>
       </nav>

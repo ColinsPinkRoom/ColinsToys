@@ -8,20 +8,6 @@
   border-radius: 24px;
 }
 
-/* ===== Page Title ===== */
-.prices-title {
-  font-family: "Lily Script One", cursive;
-  font-size: 2.5rem;
-  color: #d14c8b;
-  margin-bottom: 40px;
-  text-align: center;
-  background: linear-gradient(to right, #d14c8b, #ffaad2);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 1px 1px 1px rgba(255, 240, 245, 0.5);
-}
-
 /* ===== Grid Section (Preserving Areas) ===== */
 .prices-grid-section {
   display: grid;
