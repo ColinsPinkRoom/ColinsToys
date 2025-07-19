@@ -69,9 +69,28 @@ function PricesPage() {
 
       {/* 3. TTS Section */}
       <div className="prices-tts-message">
-        <h3>Terms of service</h3>
+        <h3>Terms of Service</h3>
         <p>
-          <strong>TTS TEXT</strong>
+          All content provided is for personal, private use only.
+          Redistribution, sharing, or resale of any content is strictly
+          prohibited.
+        </p>
+        <p>
+          By purchasing custom content or communication services (including
+          photos, videos, texting, video calls, etc.), you agree that all
+          interactions are consensual, digital in nature, and non-refundable.
+        </p>
+        <p>
+          Any inappropriate behavior, harassment, or attempts to violate
+          boundaries will result in a permanent ban from future interactions.
+        </p>
+        <p>
+          You must be 18 years or older to interact with this site or purchase
+          any content or services.
+        </p>
+        <p>
+          I reserve the right to refuse any requests or refund at my discretion
+          if terms are violated or behavior is abusive.
         </p>
       </div>
     </div>
