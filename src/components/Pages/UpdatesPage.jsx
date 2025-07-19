@@ -39,6 +39,7 @@ function UpdatesPage() {
   if (error) {
     return (
       <div className="update-container container">
+        <h2 className="titleText">Updates</h2>
         <div style={{ color: "red" }}>{error}</div>
       </div>
     );
@@ -47,6 +48,7 @@ function UpdatesPage() {
   if (!updates) {
     return (
       <div className="update-container container">
+        <h2 className="titleText">Updates</h2>
         <div className="image-loading">
           <div className="spinner"></div>
         </div>
