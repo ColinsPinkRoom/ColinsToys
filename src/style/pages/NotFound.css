@@ -1,28 +1,23 @@
-/* ==== Container Layout ==== */
+/* === Container === */
 .container.not-found-container {
   justify-content: center;
 }
 
-/* ==== Main Title ==== */
-.not-found-title {
-   : "Lily Script One", cursive;
-}
-
-/* ==== Subtitle ==== */
+/* === Subtitle === */
 .not-found-subtitle {
   font-size: 22px;
   color: #812d53;
   margin-bottom: 10px;
 }
 
-/* ==== Message Text ==== */
+/* === Message === */
 .not-found-message {
   font-size: 18px;
   color: #955070;
   margin-bottom: 20px;
 }
 
-/* ==== Button Link ==== */
+/* === Button Link === */
 .not-found-link {
   display: inline-block;
   padding: 12px 20px;

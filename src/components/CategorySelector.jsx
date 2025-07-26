@@ -31,7 +31,7 @@ function CategorySelector({
         </div>
       </section>
 
-      {title && <h4 className="category-title titleText">{title}</h4>}
+      {title && <h4 className="category-title secondaryTitle">{title}</h4>}
 
       {/* Subcategory Section */}
       {subcategories.length > 0 && (

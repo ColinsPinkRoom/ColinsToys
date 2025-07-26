@@ -48,7 +48,7 @@ function GalleryPage() {
 
   return (
     <div className="gallery-page-container container">
-      <h2 className="gallery-title">My Favorite Looks 💖</h2>
+      <h2 className="titleText gallery-title">My Favorite Looks 💖</h2>
 
       <CategorySelector
         categories={categories}

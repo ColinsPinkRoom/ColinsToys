@@ -10,12 +10,8 @@
   margin-bottom: 28px;
 }
 
-#homeTitle {
+.titleText.homeTitle {
   font-size: 2.4rem;
-  font-weight: 800;
-  color: #ff5ca5;
-  margin-bottom: 0.6rem;
-  text-shadow: 1px 1px 6px rgba(255, 180, 220, 0.4);
 }
 
 .intro-text {

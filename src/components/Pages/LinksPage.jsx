@@ -37,7 +37,7 @@ function LinksPage() {
         <div className="links-grid">
           {/* Custom Content */}
           <div className="link-card" style={{ gridArea: "area0" }}>
-            <h3 className="link-card-title">
+            <h3 className="link-card-title thirdTitle">
               Order the content of your dreams 💭
             </h3>
             <a
@@ -56,7 +56,9 @@ function LinksPage() {
 
           {/* Premium Content */}
           <div className="link-card" style={{ gridArea: "area1" }}>
-            <h3 className="link-card-title">See Premium Content ✨</h3>
+            <h3 className="link-card-title thirdTitle">
+              See Premium Content ✨
+            </h3>
             <a
               href="https://onlyfans.com/colins_pink_room"
               target="_blank"
@@ -85,7 +87,7 @@ function LinksPage() {
 
           {/* Live Streams */}
           <div className="link-card" style={{ gridArea: "area2" }}>
-            <h3 className="link-card-title">Catch Me Live 🎥</h3>
+            <h3 className="link-card-title thirdTitle">Catch Me Live 🎥</h3>
             <a
               href="https://stripchat.com/Colins_Pink_Room/follow-me"
               target="_blank"

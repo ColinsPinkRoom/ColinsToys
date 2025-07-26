@@ -10,7 +10,7 @@ function SocialsPage() {
       <section className="socials-link-section">
         <div className="socials-groups">
           <div className="socials-card">
-            <h2 className="socials-title">Social Media</h2>
+            <h2 className="thirdTitle socials-title">Social Media</h2>
             <a
               href="https://twitter.com/colinspinkroom"
               target="_blank"

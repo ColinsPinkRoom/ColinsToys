@@ -48,7 +48,7 @@ function PricesPage() {
             key={category}
             style={{ gridArea: `area${index}` }}
           >
-            <h3 className="prices-category-title">{category}</h3>
+            <h3 className="prices-category-title thirdTitle">{category}</h3>
             {items.map((item, itemIndex) => (
               <div className="prices-box" key={itemIndex}>
                 <span className="item-name">{item.name}</span>
@@ -61,7 +61,7 @@ function PricesPage() {
 
       {/* 2. Payment Note Section */}
       <div className="prices-payment-note">
-        <h3>Payment method</h3>
+        <h3 className="prices-category-title thirdTitle">Payment Method</h3>
         <p>
           <strong>Throne, Wise, Zen, PayPal</strong>
         </p>
@@ -69,7 +69,7 @@ function PricesPage() {
 
       {/* 3. TTS Section */}
       <div className="prices-tts-message">
-        <h3>Terms of Service</h3>
+        <h3 className="prices-category-title thirdTitle">Terms Of Service</h3>
         <p>
           All content provided is for personal, private use only.
           Redistribution, sharing, or resale of any content is strictly

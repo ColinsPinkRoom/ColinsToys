@@ -64,7 +64,7 @@ function UpdatesPage() {
       {updates.length > 0 ? (
         updates.map((update, index) => (
           <div key={index} className="update-item">
-            <h3>{update.title}</h3>
+            <h3 className="thirdTitle">{update.title}</h3>
             <h5>
               {new Date(update.date).toLocaleDateString("en-US", {
                 month: "long",

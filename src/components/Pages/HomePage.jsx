@@ -26,7 +26,7 @@ function HomePage() {
     <main className="home-container container">
       {/* 1. Hero Section */}
       <section className="hero-section">
-        <h2 id="homeTitle">Welcome to Colin's Pink Room 💕</h2>
+        <h2 className="homeTitle titleText">Welcome to Colin's Pink Room 💕</h2>
         <p className="intro-text">
           Hi sweetie! 💖 This is my little space to share what I love — cute
           toys, custom content, and personal connections.
