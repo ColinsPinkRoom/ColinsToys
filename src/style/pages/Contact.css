@@ -5,7 +5,7 @@
 
 /* ==== Page Title ==== */
 .contact-title {
-  font-family: "Lily Script One", cursive;
+   : "Lily Script One", cursive;
   font-size: 2.2rem;
   color: #d14c8b;
   margin-bottom: 24px;
@@ -36,7 +36,7 @@
 .contact-form textarea {
   padding: 12px 16px;
   font-size: 16px;
-  font-family: "Segoe UI", sans-serif;
+   : "Segoe UI", sans-serif;
   border: 1px solid #ffb6d9;
   border-radius: 10px;
   background: #fff0f6;

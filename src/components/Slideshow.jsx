@@ -110,7 +110,7 @@ function SlideShow({ items = [], gallery }) {
         alt="Previous"
         onClick={handlePrev}
         className="slide-btn prev"
-        loading="lazy"
+        loading="eager"
       />
 
       <div
@@ -161,7 +161,7 @@ function SlideShow({ items = [], gallery }) {
         alt="Next"
         onClick={handleNext}
         className="slide-btn next"
-        loading="lazy"
+        loading="eager"
       />
 
       <div className="carousel-dots">
