@@ -19,6 +19,7 @@ function SocialsPage() {
               <img
                 src={`${import.meta.env.BASE_URL}/icons/twitter.svg`}
                 alt="Twitter"
+                loading="eager"
               />
               Twitter
             </a>
@@ -30,6 +31,7 @@ function SocialsPage() {
               <img
                 src={`${import.meta.env.BASE_URL}/icons/bluesky.svg`}
                 alt="Bluesky"
+                loading="eager"
               />
               Bluesky
             </a>
@@ -41,6 +43,7 @@ function SocialsPage() {
               <img
                 src={`${import.meta.env.BASE_URL}/icons/xhamster.svg`}
                 alt="Xhamster"
+                loading="eager"
               />
               XHamster
             </a>

@@ -28,6 +28,7 @@ function App() {
             <img
               src={`${import.meta.env.BASE_URL}/logos/Logo-website.svg`}
               alt="Logo"
+              loading="lazy"
             />
           </div>
         </Link>

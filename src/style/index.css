@@ -32,7 +32,6 @@ html {
 /* === Body Base Styles === */
 body {
   background-color: var(--bg-base);
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: var(--text-main);
   line-height: 1.6;
   position: relative; /* Needed for ::before overlay */
@@ -54,18 +53,6 @@ body {
 
 @media (prefers-color-scheme: dark) {
   #background-overlay {
-    filter: blur(8px) brightness(0.4);
-  }
-}
-
-/* === Dark Mode Support === */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #111;
-    color: #eee;
-  }
-
-  body::before {
     filter: blur(8px) brightness(0.4);
   }
 }

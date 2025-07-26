@@ -1,20 +1,15 @@
 /* === Main App Container === */
-/* === Main App Container with Stained Glass Effect === */
 #App {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   width: 100%;
   max-width: 800px;
   min-height: 600px;
   margin: 20px auto 0;
   padding: 24px;
-
   border: 2px solid var(--pink-soft);
   border-radius: 16px;
-  background-color: rgba(255, 255, 255, 0.12);
-
   background: linear-gradient(
     135deg,
     rgba(255, 105, 180, 0.15),
@@ -23,24 +18,10 @@
     rgba(255, 240, 250, 0.22)
   );
   background-size: 400% 400%;
-  animation: glassFlow 15s ease infinite;
-
-  backdrop-filter: blur(10px) brightness(1.1);
-  border-radius: 16px;
   box-shadow: 0 6px 16px rgba(8, 8, 8, 0.4);
+  backdrop-filter: blur(10px) brightness(1.1);
+  animation: glassFlow 15s ease infinite;
   transition: box-shadow 0.3s ease;
-}
-
-@keyframes glassFlow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 #App:hover {
@@ -54,17 +35,18 @@
   }
 }
 
-/* === Main Container For Pages === */
+/* === Main Page Container === */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 32px 24px;
   width: 100%;
   max-width: 760px;
-  margin: 0 auto;
   min-height: 500px;
-
+  margin: 0 auto;
+  padding: 32px 24px;
+  border: 1px solid rgba(255, 200, 225, 0.35);
+  border-radius: 24px;
   background: linear-gradient(
       145deg,
       rgba(255, 245, 250, 0.7),
@@ -72,27 +54,20 @@
     ),
     radial-gradient(at top left, rgba(255, 255, 255, 0.4), transparent 60%),
     radial-gradient(at bottom right, rgba(255, 200, 230, 0.2), transparent 70%);
-
-  border: 1px solid rgba(255, 200, 225, 0.35);
-  border-radius: 24px;
-
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2),
     inset 0 0 8px rgba(255, 240, 250, 0.25);
-
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-
   animation: fadeIn 0.8s ease-in-out;
   transition: all 0.3s ease;
 }
 
 /* === Typography === */
-
 body {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
   line-height: 1.6;
   color: var(--pink-deep);
-  font-size: 16px;
   background-color: transparent;
 }
 
@@ -102,55 +77,25 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Playfair Display", serif;
+  font-family: "Lily Script One", cursive;
   font-weight: 700;
   color: var(--pink-main);
-  margin: 0.6em 0 0.6em;
+  margin: 0.6em 0;
   text-align: center;
   text-shadow: 1px 1px 3px rgba(255, 240, 245, 0.8);
-
-  user-select: none;
-}
-label {
   user-select: none;
 }
 
 h1 {
   font-size: 2.75rem;
 }
-
 h2 {
   font-size: 2.2rem;
 }
-
 h3 {
   font-size: 1.8rem;
 }
 
-p,
-li,
-span,
-div {
-  font-family: "Quicksand", sans-serif;
-  font-size: 1.125rem;
-  color: var(--pink-deep);
-  text-shadow: 0.5px 0.5px 1px rgba(255, 240, 245, 0.4);
-}
-
-a {
-  color: var(--pink-main);
-  font-weight: 500;
-  text-decoration: none;
-  transition: color 0.2s ease;
-  user-select: none;
-}
-
-a:hover {
-  color: var(--pink-deep);
-  text-decoration: underline;
-}
-
-/* Responsive font sizing */
 @media (max-width: 600px) {
   h1 {
     font-size: 2.2rem;
@@ -166,45 +111,72 @@ a:hover {
   }
 }
 
+label {
+  user-select: none;
+}
+
+p,
+li,
+span,
+div,
+button {
+  font-family: "Karla", sans-serif;
+  font-size: 1.125rem;
+  color: var(--pink-deep);
+  text-shadow: 0.5px 0.5px 1px rgba(255, 240, 245, 0.4);
+}
+
+a {
+  font-family: "Karla", sans-serif;
+  color: var(--pink-main);
+  font-weight: 500;
+  text-decoration: none;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--pink-deep);
+  text-decoration: underline;
+}
+
 /* === Utility === */
 img {
   user-select: none;
   -webkit-user-drag: none;
 }
 
-/* === Loading Message === */
+/* === Loading State === */
 #loadingMessage {
-  font-weight: bold;
   font-size: 1.2rem;
+  font-weight: bold;
   margin-bottom: 1rem;
   color: var(--pink-deep);
 }
 
-/* === Logo / Main Title Section === */
+/* === Logo & Title Section === */
 .logo-container {
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 100%;
+  height: 100%;
+  max-height: 134px;
   max-width: 640px;
   margin: 0 auto 24px;
   padding: 20px 32px;
-
   border-radius: 20px;
+  border: 1px solid rgba(255, 182, 193, 0.4);
   background: linear-gradient(
     135deg,
     rgba(255, 192, 203, 0.2),
     rgba(255, 240, 250, 0.25)
   );
   background-size: 200% 200%;
-  animation: glassFlow 12s ease infinite;
-
-  border: 1px solid rgba(255, 182, 193, 0.4);
   box-shadow: 0 4px 12px rgba(255, 105, 180, 0.25);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-
+  animation: glassFlow 12s ease infinite;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -220,15 +192,15 @@ img {
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
 }
 
-/* === Spinner Animation === */
+/* === Spinner / Loader === */
 .spinner {
   width: 40px;
   height: 40px;
+  margin: 0 auto;
   border: 4px solid var(--pink-soft);
   border-top: 4px solid transparent;
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
-  margin: 0 auto;
 }
 
 @keyframes spin {
@@ -237,24 +209,24 @@ img {
   }
 }
 
-/* === Horizontal Rule Styles === */
+/* === Horizontal Rules === */
 hr {
-  border: none;
-  height: 1px;
   width: 100%;
-  background: linear-gradient(to right, transparent, #ff94c1c4, transparent);
+  height: 1px;
   margin: 2em 0;
+  border: none;
+  background: linear-gradient(to right, transparent, #ff94c1c4, transparent);
 }
 
 .hr-underline {
   margin-top: 0;
-  box-shadow: rgb(255 150 212 / 41%) 0px 3px 5px 2px;
+  box-shadow: 0px 3px 5px 2px rgb(255 150 212 / 41%);
 }
 
+/* === Section Titles === */
 .titleText {
   font-family: "Lily Script One", cursive;
   font-size: 2.2rem;
-  color: #d14c8b;
   margin-bottom: 24px;
   background: linear-gradient(to right, #ff248c, #ff0079);
   -webkit-background-clip: text;
@@ -264,6 +236,7 @@ hr {
   text-align: center;
 }
 
+/* === Section Separator === */
 .section-separator {
   width: 80%;
   height: 4px;
@@ -287,7 +260,7 @@ hr {
   color: #fff;
 }
 
-/* === Responsive Layout === */
+/* === Responsive === */
 @media (max-width: 768px) {
   #mainTitle {
     margin-bottom: 40px;
@@ -306,5 +279,62 @@ hr {
 
   .logo-container img {
     max-width: 300px;
+  }
+}
+
+/* === Global Animations === */
+@keyframes glassFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }

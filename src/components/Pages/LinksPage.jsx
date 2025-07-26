@@ -48,6 +48,7 @@ function LinksPage() {
               <img
                 src={`${import.meta.env.BASE_URL}/icons/iwantclips.svg`}
                 alt="IWantClips"
+                loading="eager"
               />
               Custom via IWantClips
             </a>
@@ -64,6 +65,7 @@ function LinksPage() {
               <img
                 src={`${import.meta.env.BASE_URL}/icons/onlyfans.svg`}
                 alt="OnlyFans"
+                loading="eager"
               />
               View on OnlyFans
             </a>
@@ -75,6 +77,7 @@ function LinksPage() {
               <img
                 src={`${import.meta.env.BASE_URL}/icons/fansly.svg`}
                 alt="Fansly"
+                loading="eager"
               />
               View on Fansly
             </a>
@@ -91,6 +94,7 @@ function LinksPage() {
               <img
                 src={`${import.meta.env.BASE_URL}/icons/stripchat.svg`}
                 alt="Stripchat"
+                loading="eager"
               />
               Watch on Stripchat
             </a>
@@ -102,6 +106,7 @@ function LinksPage() {
               <img
                 src={`${import.meta.env.BASE_URL}/icons/chaturbate.svg`}
                 alt="Chaturbate"
+                loading="eager"
               />
               Watch on Chaturbate
             </a>
