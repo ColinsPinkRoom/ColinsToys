@@ -7,7 +7,7 @@ function ContactPage() {
 
   return (
     <div className="container contact-container">
-      <h2 className="contact-title">Contact Me</h2>
+      <h2 className="contact-title titleText">Contact Me</h2>
       {state.succeeded ? (
         <p className="contact-success">✅ Thanks for your message!</p>
       ) : (
